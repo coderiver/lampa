@@ -142,6 +142,8 @@
 			font-size: 16px
 			color: #018AD1
 			line-height: 1
+			&:hover
+				text-decoration: underline
 	p
 		+reg
 		font-size: 12px
@@ -546,6 +548,10 @@
 				padding: 3px 10px
 				border: 1px solid #ffffff 
 				display: inline-block
+				+transition(color 0.2s, background 0.2s)
+				&:hover
+					background: #fff
+					color: #000  
 	&__no
 		color: #fff
 		text-align: center
@@ -848,6 +854,8 @@
 		color: #018AD1
 		+semi
 		line-height: 1.2
+		&:hover
+			text-decoration: underline
 	span
 		font-size: 16px
 		color: #494949
@@ -978,7 +986,11 @@
 	padding: 3px 10px
 	display: inline-block
 	vertical-align: top
-	margin: 0 10px 10px 0   
+	margin: 0 10px 10px 0  
+	+transition(color 0.2s, background 0.2s) 
+	&:hover
+		background: #E84C3D 
+		color: #fff 
 .similar
 	padding: 25px 0 0 
 	+r3

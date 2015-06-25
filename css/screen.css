@@ -49,7 +49,9 @@ p { font-family: "OpenSans Regular", Arial, sans-serif; font-size: 18px; line-he
 
 .date { display: block; font-family: "OpenSans Regular", Arial, sans-serif; font-size: 12px; line-height: 1; color: #3e3e3e; }
 
-.button { color: white; font-family: "OpenSans Regular", Arial, sans-serif; font-size: 18px; width: 140px; text-align: center; line-height: 40px; border-radius: 4px; background: gray; display: inline-block; }
+.button { color: white; font-family: "OpenSans Regular", Arial, sans-serif; font-size: 18px; width: 140px; text-align: center; line-height: 40px; border-radius: 4px; background: gray; display: inline-block; position: relative; -moz-transition: opacity 0.2s; -o-transition: opacity 0.2s; -webkit-transition: opacity 0.2s; transition: opacity 0.2s; }
+.button:hover { filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90); opacity: 0.9; }
+.button:active { top: 1px; }
 .button_fb { background-color: #3b5998; }
 .button_vk { background-color: #4c75a3; }
 .button_tw { background-color: #00abf1; }
@@ -153,6 +155,7 @@ p { font-family: "OpenSans Regular", Arial, sans-serif; font-size: 18px; line-he
 @media only screen and (max-width: 500px) { .footer__nav { float: none; margin-bottom: 10px; } }
 .footer__nav li { display: inline-block; vertical-align: top; padding: 3px 0; margin-right: 18px; }
 .footer__nav a { font-family: "OpenSans Semibold", Arial, sans-serif; font-size: 16px; color: #018ad1; line-height: 1; }
+.footer__nav a:hover { text-decoration: underline; }
 .footer p { font-family: "OpenSans Regular", Arial, sans-serif; font-size: 12px; line-height: 16px; color: #7e7e7e; }
 .footer__copy { clear: both; padding: 12px 0 0; }
 
@@ -265,7 +268,8 @@ p { font-family: "OpenSans Regular", Arial, sans-serif; font-size: 18px; line-he
 .search__tags { padding: 20px 10px; }
 .search__tags .small { color: white; margin-bottom: 20px; }
 .search__tags li { display: inline-block; vertical-align: top; margin: 0 10px 10px 0; }
-.search__tags li a { color: white; font-size: 16px; font-family: "OpenSans Regular", Arial, sans-serif; padding: 3px 10px; border: 1px solid white; display: inline-block; }
+.search__tags li a { color: white; font-size: 16px; font-family: "OpenSans Regular", Arial, sans-serif; padding: 3px 10px; border: 1px solid white; display: inline-block; -moz-transition: color 0.2s, background 0.2s; -o-transition: color 0.2s, background 0.2s; -webkit-transition: color 0.2s, background 0.2s; transition: color 0.2s, background 0.2s; }
+.search__tags li a:hover { background: white; color: black; }
 .search__no { color: white; text-align: center; padding: 35px 0; }
 .search__no .title-h4 { margin-bottom: 14px; font-family: "OpenSans Semibold", Arial, sans-serif; }
 
@@ -354,6 +358,7 @@ p { font-family: "OpenSans Regular", Arial, sans-serif; font-size: 18px; line-he
 .author__img img { width: 100%; height: 100%; }
 .author__info { overflow: hidden; padding: 18px 0; }
 .author__name { font-size: 18px; color: #018ad1; font-family: "OpenSans Semibold", Arial, sans-serif; line-height: 1.2; }
+.author__name:hover { text-decoration: underline; }
 .author span { font-size: 16px; color: #494949; font-family: "OpenSans Regular", Arial, sans-serif; display: block; }
 
 .share { border-top: 1px solid #dbdbdb; border-bottom: 1px solid #dbdbdb; margin-bottom: 5px; }
@@ -391,7 +396,8 @@ p { font-family: "OpenSans Regular", Arial, sans-serif; font-size: 18px; line-he
 .twitter__source p a { text-decoration: underline; color: #018ad1; }
 .twitter__source p a:hover { text-decoration: none; }
 
-.r-tag { font-size: 16px; color: #e84c3d; font-family: "OpenSans Regular", Arial, sans-serif; border: 1px solid #e84c3d; padding: 3px 10px; display: inline-block; vertical-align: top; margin: 0 10px 10px 0; }
+.r-tag { font-size: 16px; color: #e84c3d; font-family: "OpenSans Regular", Arial, sans-serif; border: 1px solid #e84c3d; padding: 3px 10px; display: inline-block; vertical-align: top; margin: 0 10px 10px 0; -moz-transition: color 0.2s, background 0.2s; -o-transition: color 0.2s, background 0.2s; -webkit-transition: color 0.2s, background 0.2s; transition: color 0.2s, background 0.2s; }
+.r-tag:hover { background: #e84c3d; color: white; }
 
 .similar { padding: 25px 0 0; }
 @media only screen and (max-width: 660px) { .similar { max-width: 300px; margin: 0 auto; } }
