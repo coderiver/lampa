@@ -42,4 +42,32 @@ head.ready(function() {
 		});
 	});
 
+	//sticky
+	$(function(){ // document ready
+	   if (!!$('.js-sticky').length) { // make sure ".js-sticky" element exists
+	      var el = $('.js-sticky');
+	      var stickyTop = $('.js-sticky').offset().top; // returns number
+	      var footerTop = $('.js-sticky-end').offset().top; // returns number
+	      var stickyHeight = $('.js-sticky').height();
+	      var limit = footerTop - stickyHeight - 10;
+	      $(window).scroll(function(){ // scroll event
+	          var windowTop = $(window).scrollTop(); // returns number
+	            
+	          if (stickyTop-10 < windowTop){
+	             el.css({ position: 'fixed', top: 0 });
+	             el.addClass('is-active');
+	          }
+	          else {
+	             el.css('position','static');
+	             el.removeClass('is-active');
+	          }
+	            
+	          if (limit < windowTop) {
+	          var diff = limit - windowTop;
+	          el.css({top: diff});
+	          }     
+	        });
+	   }
+	});
+
 });
