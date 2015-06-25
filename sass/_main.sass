@@ -15,6 +15,8 @@
 	background: #018ad1 
 	font-size: 0
 	min-height: 60px 
+	&.is-orange
+		background-color: #E84C3D
 	&__btns
 		float: right
 		padding: 19px 0 0
@@ -49,8 +51,11 @@
 .logo
 	float: left
 	margin: 11px 50px 0 0 
+	max-width: 132px
 	+r1
 		margin-right: 20px
+	img
+		width: 100%
 	
 .nav
 	float: left
@@ -381,6 +386,8 @@
 		z-index: 2
 		+r1
 			padding: 20px 30px 30px 
+		+r3
+			padding: 20px 20px 28px 
 	.small
 		margin-bottom: 13px
 	.title-h3
@@ -700,3 +707,289 @@
 				text-decoration: underline
 				&:hover
 					text-decoration: none
+					
+
+//PAGES
+.page
+	padding: 10px 0 
+	margin: 0 auto
+	&__container
+		margin: 0 -10px
+		font-size: 0
+	&__content
+		width: 66.6%
+		padding: 0 10px
+		+box
+		display: inline-block
+		vertical-align: top
+		+r1
+			width: 100%
+			display: block
+			margin: 0 auto 
+			max-width: 640px
+	&__sidebar
+		width: 33.3%
+		padding: 10px 10px 0
+		+box
+		display: inline-block
+		vertical-align: top
+		+r1
+			width: 100%
+			max-width: 320px
+			display: block
+			margin: 0 auto
+	&__info
+		margin-bottom: 10px
+		h5
+			padding: 15px 0  
+	&__full
+		padding: 0 10px 		
+		+r1
+			width: 100%
+			display: block
+			margin: 0 auto 
+			max-width: 640px
+			+box
+	&__banner
+		border: 1px solid #878787
+	&__box
+		margin-bottom: 20px
+	&__tags
+		border-bottom: 1px solid #dbdbdb
+		padding: 15px 0 10px		
+		.title-h5
+			color: #494949
+			margin-bottom: 15px
+.big
+	padding: 10px 0 	
+	+r1
+		width: 100%
+		display: block
+		margin: 0 auto 
+		max-width: 640px
+	&__inner
+		display: block
+		+cover
+		height: 400px
+		position: relative
+		color: #fff 
+		+r3
+			height: 300px
+		&:before
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: #000
+			+opacity(0.3) 
+			z-index: 2
+			content: "" 
+	&__text
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		padding: 10px 80px 5px
+		z-index: 3 
+		+r1
+			padding: 10px 20px 
+	&__date, &__views
+		font-size: 14px
+		+semi
+		text-transform: uppercase
+		line-height: 1
+		margin-right: 30px
+	&__date, &__views, .tags
+		display: inline-block
+		vertical-align: top
+	&__date, &__views, .small
+		margin-bottom: 9px
+	.title-h2
+		margin-bottom: 30px
+		text-shadow: 0 1px 0 rgba(0, 1, 1, 0.5)
+		
+.s-blockquote
+	margin: 10px -10px
+	padding: 0 10px  
+	border-radius: 4px
+	&.is-bg
+		background-color: #F2F2F2
+		padding: 20px 15px 0 20px
+		.s-blockquote__text
+			margin-bottom: 10px
+	&__text
+		+git
+		font-size: 18px
+		color: #494949 
+		line-height: 26px
+		padding: 4px 10px 3px 15px
+		border-left: 3px solid #E84C3D
+		margin-bottom: 20px
+		
+.author
+	+clr
+	padding-bottom: 20px
+	&__img
+		width: 80px
+		height: 80px
+		border-radius: 50%
+		overflow: hidden
+		float: left
+		margin: 0 20px 0 0 
+		img
+			width: 100%
+			height: 100%
+	&__info
+		overflow: hidden
+		padding: 18px 0 
+	&__name
+		font-size: 18px
+		color: #018AD1
+		+semi
+		line-height: 1.2
+	span
+		font-size: 16px
+		color: #494949
+		+reg
+		display: block
+		
+.share
+	border-top: 1px solid #dbdbdb
+	border-bottom: 1px solid #dbdbdb
+	margin-bottom: 5px 
+	&.is-mod
+		padding-bottom: 10px
+	&__btns
+		padding: 10px 0 0
+	&__btn
+		display: inline-block
+		vertical-align: top
+		margin: 0 14px 10px 0 
+	.title-h5
+		color: #494949
+		padding: 25px 0 5px
+		  
+		
+.text
+	padding: 10px 0 
+	.title-h4
+		margin-bottom: 12px
+	p
+		font-size: 16px
+		color: #494949
+		line-height: 20px
+		b
+			+bold
+	&__img
+		padding: 16px 0 5px 
+		img
+			width: 100%
+			display: block
+
+.video
+	padding: 6px 0  
+	&__inner
+		position: relative
+		width: 100%
+		height: 0
+		padding: 0 0 60%
+	iframe
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		width: 100%
+		height: 100%
+		
+.b-block
+	padding: 10px 0 
+	&__inner
+		+cover
+		width: 100%
+		display: block
+		color: #fff 
+		position: relative
+		padding: 94px 15px 96px 
+		+box
+		+r3
+			padding: 20px 15px 
+		&:before
+			content: "" 
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background: #000
+			+opacity(0.3)
+			z-index: 2 
+	&__text
+		position: relative
+		z-index: 3  
+		max-width: 740px
+		margin: 0 auto
+		text-align: center  
+		p
+			+git
+			font-size: 32px
+			line-height: 42px
+			+r3
+				font-size: 24px
+				line-height: 1.2
+			
+.t-blockquote
+	&__text
+		font-size: 24px
+		+git
+		color: #2E2E2E
+		background: url(../img/icons/quote.png) no-repeat top left
+		padding: 4px 10px 12px
+		
+.twitter
+	padding: 10px 0 
+	&__inner
+		max-width: 465px
+		width: 100%
+		+box
+		box-shadow: 0 0px 3px rgba(0, 0, 0, 0.5)
+		border-radius: 4px
+		overflow: hidden
+	img
+		max-width: 100%
+	&__source
+		padding: 15px 0 5px 
+		p
+			font-size: 16px
+			color: #494949
+			+preg
+			a
+				text-decoration: underline
+				color: #018AD1
+				&:hover
+					text-decoration: none
+					
+.r-tag
+	font-size: 16px
+	color: #E84C3D
+	+reg
+	border: 1px solid #E84C3D
+	padding: 3px 10px
+	display: inline-block
+	vertical-align: top
+	margin: 0 10px 10px 0   
+.similar
+	padding: 25px 0 0 
+	+r3
+		max-width: 300px
+		margin: 0 auto
+	.title-h5
+		color: #494949
+		text-align: center
+		padding: 0 0 5px 
+
+.comments
+	padding: 10px 0
+	img
+		max-width: 100%
