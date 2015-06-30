@@ -454,3 +454,13 @@ p { font-family: "OpenSans Regular", Arial, sans-serif; font-size: 18px; line-he
 .b-slide p { font-size: 14px; }
 .b-slide p a { color: #018ad1; text-decoration: underline; font-family: "OpenSans Italic", Arial, sans-serif; }
 .b-slide p a:hover { text-decoration: none; }
+
+body.is-error { height: 100%; text-align: center; font-size: 0; background: #018ad1; min-height: 500px; min-width: 320px; }
+body.is-error:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
+
+.error { display: inline-block; vertical-align: middle; color: white; padding: 20px; }
+.error__logo { display: inline-block; margin-bottom: 60px; }
+.error__title { font-family: "OpenSans Semibold", Arial, sans-serif; display: block; font-size: 120px; line-height: 1.2; display: block; margin-bottom: 10px; }
+.error .title-h5 { margin-bottom: 90px; }
+.error__link { color: white; display: inline-block; text-decoration: underline; display: inline-block; font-size: 16px; font-family: "OpenSans Regular", Arial, sans-serif; }
+.error__link:hover { text-decoration: none; }
