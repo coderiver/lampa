@@ -1,5 +1,3 @@
-//index one and two cols
-
 //icons
 .down_ico
 	display: inline-block
@@ -16,15 +14,15 @@
 
 //header
 .header
-	&.is-white
-		position: absolute
-		left: 0
-		right: 0
-		background: #FFF
-		border-bottom: 2px solid #d6d6d6
-		z-index: 2
-		+r(768)
-			position: fixed
+	position: absolute
+	min-height: 60px
+	left: 0
+	right: 0
+	background: #FFF
+	border-bottom: 2px solid #d6d6d6
+	z-index: 2
+	+r(768)
+		position: fixed
 
 .view
 	font-size: 0
@@ -55,22 +53,34 @@
 		margin-left: 0
 
 .btn-menu
-	&.is-black
-		display: none
-		float: right
-		margin-right: 0
-		&:before,
-		&:after
-			width: 23px
-			height: 2px
-			background: #000
-			+transform-origin(left)
-			+transition(transform 0.2s ease)
-		span
-			width: 23px
-			height: 2px
-			margin-top: -1px
-			background: #000
+	display: none
+	position: relative
+	float: right
+	margin-top: 21px
+	width: 24px
+	height: 18px
+	background: none
+	cursor: pointer
+	&:before, &:after, span
+		position: absolute
+		width: 23px
+		height: 2px
+		background: #000
+		height: 2px
+		border-radius: 2px
+		left: 0
+		right: 0
+		+transform-origin(left)
+		+transition(transform 0.2s ease)
+	&:before
+		content: ""
+		top: 0
+	&:after
+		content: ""
+		bottom: 0
+	span
+		top: 50%
+		margin-top: -1px
 	&.is-active
 		span
 			display: none
@@ -78,64 +88,76 @@
 			+transform(rotateZ(45deg))
 		&:after
 			+transform(rotateZ(-45deg))
-	+r(1000)
-		&.is-black
-			display: block
+	+r(768)
+		display: block
 
+//navigation
 .nav
-	&.is-another
-		position: relative
-		li
-			&:last-child
-				a
-					margin-left: 15px
-		a
-			margin: 0 10px
-			padding: 24px 0
-			font-size: 12px
-			color: #9d9d9d
-			+lucida
-			&:before
-				top: inherit
-				left: 0
-				right: 0
-				bottom: -1px
-				background: #000
-			&.is-active
-				color: #000
-				&:after
-					display: none
-				&:before
-					display: block
-					height: 3px
-		+r(1000)
-			position: absolute
-			display: block
-			top: 62px
-			right: 15px
-			max-height: 320px
-			padding: 10px 20px
-			background: #fff
-			box-shadow: 0px 0 1px 0px #9d9d9d, 0px 0 1px 0px #9d9d9d
-			opacity: 0
-			visibility: hidden
-			overflow-Y: auto
-			+transition(all 0.2s ease)
-			&.is-active
-				opacity: 1
-				visibility: visible
-			li
-				display: block
-				margin: 5px 0
-				&:last-child a
-					margin-left: 0
+	position: relative
+	font-size: 0
+	li
+		display: inline-block
+		vertical-align: top
+		&:last-child
 			a
-				display: inline-block
-				margin: 0
-				padding: 8px 0
-		+r(500)
+				margin-left: 15px
+	a
+		display: block
+		margin: 0 10px
+		padding: 24px 0
+		font-size: 12px
+		color: #9d9d9d
+		text-transform: uppercase
+		+lucida
+		&:before
+			top: inherit
 			left: 0
 			right: 0
+			bottom: -1px
+			background: #000
+		&.is-active
+			color: #000
+			&:after
+				display: none
+			&:before
+				display: block
+				height: 3px
+	+r(1000)
+		float: right
+		li
+			&:last-child a
+				margin-left: 5px
+		a
+			margin: 0 5px
+			font-size: 10px
+	+r(768)
+		position: absolute
+		display: block
+		top: 62px
+		right: 15px
+		max-height: 320px
+		padding: 10px 20px
+		background: #fff
+		box-shadow: 0px 0 1px 0px #9d9d9d, 0px 0 1px 0px #9d9d9d
+		opacity: 0
+		visibility: hidden
+		overflow-Y: auto
+		+transition(all 0.2s ease)
+		&.is-active
+			opacity: 1
+			visibility: visible
+		li
+			display: block
+			margin: 5px 0
+			&:last-child a
+				margin-left: 0
+		a
+			display: inline-block
+			margin: 0
+			padding: 8px 0
+	+r(500)
+		left: 0
+		right: 0
 
 
 .subcategory
@@ -170,7 +192,7 @@
 	&.is-active
 		opacity: 1
 		visibility: visible
-	p
+	&__name
 		padding: 13px 20px
 		font-size: 12px
 		text-transform: uppercase
@@ -185,12 +207,18 @@
 			display: inline-block
 			padding: 5px 10px
 			color: #9d9d9d
-			font-size: 12px
 			text-transform: uppercase
 			&:hover
 				text-decoration: underline
 			&:before
 				display: none
+	+r(1000)
+		&:before, &:after
+			right: 31px
+		&__list
+			font-size: 10px
+		&__name
+			font-size: 10px
 
 //main article
 .article
@@ -295,6 +323,7 @@
 //footer
 .footer
 	text-align: center
+	box-shadow: inset 0 1px 0 #d6d6d6
 	&.is-absolute
 		position: absolute
 		left: 0
@@ -368,7 +397,7 @@
 			&.is-right
 				float: none
 		&__link
-			margin-top: 2px
+			margin-top: 0
 		.social
 			display: block
 	+r(768)
