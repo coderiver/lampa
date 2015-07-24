@@ -34,11 +34,11 @@
 //     @each $s in a,b,c
 // 	    	#{$s}
 //				display: none
-// ## fonts
+// ## fonts 
 // Save fonts to /css/fonts, after that write (eot, woff, ttf):
-// +font(book, cytiapro-black-webfont)
+// +font(book, cytiapro-black-webfont)  
 // =book
-// 	font-family: "book", Arial, sans-serif
+// 	font-family: "book", Arial, sans-serif 
 // insert pics into css
 // div
 // 	+pic("blabla.png")
@@ -49,12 +49,10 @@
 
 
 body
-	font-family: Arial, sans-serif
-	font-size: 12px
+	font-family: Arial, sans-serif 
+	font-size: 12px 
 	line-height: 1.4
-	&.is-gray
-		background: #f4f4f4
-
+	
 //media breakpoints
 =r1
 	@media only screen and (max-width: "1024px")
@@ -70,33 +68,32 @@ body
 		@content
 
 
-//fonts
+
+
+//fonts	
 
 +font("OpenSans Semibold", opensans-semibold)
 +font("OpenSans Bold", opensans-bold)
 +font("OpenSans Regular", opensans-regular)
 +font("OpenSans Italic", opensans-italic)
 +font("ProximaNova Regular", ProximaNova-Regular)
-+font("Lucida Grande", lucida-grande)
+
 
 =semi
-	font-family: "OpenSans Semibold", Arial, sans-serif
+	font-family: "OpenSans Semibold", Arial, sans-serif 
 =bold
-	font-family: "OpenSans Bold", Arial, sans-serif
+	font-family: "OpenSans Bold", Arial, sans-serif 
 =reg
-	font-family: "OpenSans Regular", Arial, sans-serif
+	font-family: "OpenSans Regular", Arial, sans-serif 
 =italic
-	font-family: "OpenSans Italic", Arial, sans-serif
+	font-family: "OpenSans Italic", Arial, sans-serif 
 
 =preg
 	font-family: "ProximaNova Regular", Arial, sans-serif
 
 =git
-	font-family: "Georgia", Arial, sans-serif
+	font-family: "Georgia", Arial, sans-serig
 	font-style: italic
-
-=lucida
-	font-family: "Lucida Grande", Arial, sans-serif
 
 //reset
 h1, h2, h3, h4, h5, h6, strong, b
@@ -118,7 +115,7 @@ p
 	display: block
 	+r3
 		font-size: 24px
-
+	
 .title-h3
 	+bold
 	font-size: 32px
@@ -126,7 +123,7 @@ p
 	display: block
 	+r3
 		font-size: 24px
-
+	
 .title-h4
 	+bold
 	font-size: 24px
@@ -138,7 +135,7 @@ p
 	font-size: 20px
 	line-height: 24px
 	display: block
-
+	
 .small
 	font-size: 14px
 	+semi
@@ -147,10 +144,10 @@ p
 	display: block
 	&_bigger
 		font-size: 18px
-
+		
 .date
 	display: block
 	+reg
 	font-size: 12px
 	line-height: 1
-	color: #3e3e3e
+	color: #3e3e3e 
