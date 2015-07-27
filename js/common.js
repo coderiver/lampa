@@ -38,7 +38,9 @@ head.ready(function() {
 		focusOnSelect: true
 	});
 
-	$('.js-fancy').fancybox();
+	$('.js-fancy').fancybox({
+		openEffect: 'fade'
+	});
 
 	$('.js-view').click(function (e) {
 
