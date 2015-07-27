@@ -1,8 +1,20 @@
 head.ready(function() {
 
-	$('.js-click').click(function(e){
+	$(window).resize(function() {
+		var w = "sfgdh";
+
+		console.log(w);
+
+		if($(window).width() < 769) {
+			$('.js-category').removeClass('is-active');
+		}
+	});
+
+	$('.js-click').click(function(e) {
 		e.preventDefault();
-		$(this).closest('.js-parent').find('.js-category').toggleClass('is-active');
+		if($(window).width() > 768){
+			$('.js-category').toggleClass('is-active');
+		}
 	});
 
 	//scroll
