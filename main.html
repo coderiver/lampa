@@ -20,8 +20,8 @@
 		<!-- begin inner  -->
 		<section class="inner js-parent">
 			<div class="view">
-				<a href='#' class="view__icon is-active"></a>
-				<a href='#' class="view__icon"></a>
+				<a href='#' class="view__icon is-active js-view"></a>
+				<a href='#' class="view__icon js-view two-col"></a>
 			</div>
 			<nav class="nav js-nav js-scroll" data-mcs-theme="minimal-dark">
 				<ul>
@@ -33,23 +33,7 @@
 					<li><a href="#"><span>Образование</span></a></li>
 					<li><a href="#"><span>Финансы</span></a></li>
 					<li><a href="#"><span>Здоровье</span></a></li>
-					<li>
-						<a href="#" class="js-click"><span>Другие</span><i class="down_ico"></i></a>
-						<ul class="subcategory js-subcategory">
-							<li><a href="#">Мир</a></li>
-							<li><a href="#">Страна</a></li>
-							<li><a href="#">Жизнь</a></li>
-							<li><a href="#">Общество</a></li>
-							<li><a href="#">Мир</a></li>
-							<li><a href="#">Страна</a></li>
-							<li><a href="#">Жизнь</a></li>
-							<li><a href="#">Общество</a></li>
-							<li><a href="#">Смайл</a></li>
-							<li><a href="#">Видео</a></li>
-							<li><a href="#">Деньги</a></li>
-							<li><a href="#">Музыка</a></li>
-						</ul>
-					</li>
+					<li><a href="#" class="js-click"><span>Другие</span><i class="down_ico"></i></a></li>
 				</ul>
 			</nav>
 			<div class="category js-category">
@@ -75,7 +59,7 @@
 					</ul>
 				</div>
 			</div>
-			<button class="btn-menu is-black js-btn">
+			<button class="btn-menu js-btn">
 				<span></span>
 			</button>
 		</section>
@@ -85,6 +69,61 @@
 	<div class="inner">
 		<!-- begin article -->
 		<div class="article">
+			<div class="sidebar js-scroll" data-mcs-theme="minimal-dark">
+				<form>
+					<label class="search"><input type="search" placeholder="Поиск"><button type="send" class="search_ico"></button></label>
+				</form>
+				<ul class="sidebar__list">
+					<li>
+						<a href="#">
+							<p>Предложен хай-тековый концепт столичного Дома профсоюзов</p>
+							<small>24 минуты назад</small>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<p>Киевстар и Астелит расширили покрытие 3G на новые города</p>
+							<small>36 минут назад</small>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<p>Попавшихся контрабандистов отправили на мобилизацию</p>
+							<small>1 час назад</small>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<p>Налоговая устранила «конверт» в Киеве с оборотом 1,7 млрд грн</p>
+							<small>1 час назад</small>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<p>Польша готова инвестировать в строительство метро на Троещину</p>
+							<small>2 часа назад</small>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<p>Американский генерал поддержал предоставление оружия Украине</p>
+							<small>2 часа назад</small>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<p>Россия способна уничтожить Штаты, — генерал армии США</p>
+							<small>3 часа назад</small>
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<p>Глава ОБСЕ обозначил сроки разрешения конфликта в Донбассе</p>
+							<small>3 часа назад</small>
+						</a>
+					</li>
+				</ul>
+			</div>
 			<div class="article__in js-scroll" data-mcs-theme="minimal-dark">
 				<h2 class="article__ttl">Первый Полет: история пилотирования моим первым беспилотником</h2>
 				<div class="article__info">
@@ -99,24 +138,36 @@
 						<img src="img/drone-2.jpg" alt="">
 						<img src="img/drone-3.jpg" alt="">
 					</div>
-					<div class="sidebar-slider js-vertical">
-						<a href="#"><img src="img/drone.jpg" alt=""></a>
-						<a href="#"><img src="img/drone-1.jpg" alt=""></a>
-						<a href="#"><img src="img/drone-2.jpg" alt=""></a>
-						<a href="#"><img src="img/drone-3.jpg" alt=""></a>
+					<div class="side-slider js-vertical">
+						<div class="side-slider__img"><img src="img/drone.jpg" alt=""></div>
+						<div class="side-slider__img"><img src="img/drone-1.jpg" alt=""></div>
+						<div class="side-slider__img"><img src="img/drone-2.jpg" alt=""></div>
+						<div class="side-slider__img"><img src="img/drone-3.jpg" alt=""></div>
 					</div>
 				</div>
 				<div class="article__bl">
 					<p class="article__describe">БПЛА стал помощником виноделов французского региона Бордо. Здесь летающий робот, оснащенный камерой с высоким разрешением, контролирует ситуацию на землях и передает виноделам информацию о том, в каком состоянии лоза.</p>
 					<p>Дроны уже активно применяются для <a href="#">съемки с высоты</a>, также их перспективу рассмотрели в оборонной промышленности. Однако области применения коптеров постоянно расширяются. <a href="#">Robohunter</a> рассказывает о 15 сферах деятельности, где могут прижиться эти роботизированные установки. Судя по количеству и разнообразию профессий, на смену которым могут прийти БПЛА, можно сказать, что эра дронов наступила!</p>
-					<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Blanditiis aut aspernatur repudiandae, officia, pariatur debitis? Sed eveniet vitae aliquid laudantium eum? Minima nisi aut soluta iste maiores ipsum assumenda nihil fuga nemo eligendi, quaerat facilis recusandae quam a harum at fugiat, corporis laudantium architecto molestias ipsa esse provident repellendus. Nihil qui minima error maxime eum illo reprehenderit dolores consequatur cumque quae? Consequatur unde, alias ex, distinctio esse sapiente corporis, sunt voluptate repellat eius doloribus. Deleniti explicabo hic veniam earum praesentium animi, eveniet mollitia quidem officia itaque enim vitae blanditiis temporibus impedit maiores nesciunt similique. Unde neque cupiditate odit reprehenderit error voluptatibus aperiam, illum voluptatum iusto assumenda accusantium eos illo quibusdam similique! Debitis optio sequi atque in quis nihil, quaerat iusto quae quidem consectetur dolore cupiditate, officiis suscipit ex hic reprehenderit. Atque pariatur, minus ratione ea fuga suscipit, nihil explicabo. Modi nobis commodi quos rem vitae, mollitia accusamus! In et amet aperiam earum nulla ratione sit, deserunt voluptatum unde! Nobis possimus sunt at eius adipisci! Suscipit, eveniet voluptatem asperiores at. Voluptas ut porro vero, consectetur nisi tenetur expedita aliquid. Laudantium, sit, corporis. Voluptatum officia nihil adipisci saepe praesentium hic. Dicta id itaque obcaecati harum. Necessitatibus animi eveniet omnis incidunt, tenetur excepturi!</p> -->
+					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem consequuntur ab odit aut placeat pariatur, magnam eum minus. Earum rerum cupiditate, minima quos culpa sint voluptatibus natus distinctio quasi blanditiis reprehenderit officia placeat laudantium consequatur, quisquam necessitatibus eum ducimus quo! Delectus nemo earum corporis praesentium facere dolorem quisquam porro blanditiis non, accusamus sed voluptatem aperiam voluptates, ipsum asperiores voluptatum veritatis inventore! Unde, sequi, ex voluptas rem itaque in quae, a officiis quo reiciendis nostrum magnam quos, nobis rerum enim! Obcaecati eius illo cupiditate labore voluptates tempore, autem praesentium atque, magnam sequi asperiores incidunt omnis minima quia delectus eum consectetur provident officiis aliquid quod repellat. Fuga eum dignissimos ut, repellat alias, eius placeat molestiae laudantium dicta dolorum quod atque fugiat doloribus nam asperiores aliquid cum molestias reiciendis in, fugit magnam aspernatur magni quisquam. Ex nulla deserunt veritatis nobis eos, cumque voluptates! Dolor, iusto enim sapiente eaque. Facilis commodi reprehenderit officiis maxime similique inventore explicabo, recusandae eligendi voluptatum itaque dignissimos cum vero nam numquam corrupti dicta esse, cumque est. Adipisci cumque voluptatum quasi quia, error corporis omnis nam nulla dolores blanditiis. Ea non officia quasi obcaecati dolores in recusandae, quia nam. Officia illum cupiditate voluptatem minus laboriosam corporis totam, ex, maiores sint.</p>
 				</div>
 			</div>
 		</div>
 		<!-- end article -->
 	</div>
+	<!-- begin controller  -->
+	<div class="controller">
+		<div class="controller__wrap is-center">
+			<div class="controller__btn"><i class="controller__icon is-up"></i></div>
+		</div>
+		<div class="controller__wrap">
+			<div class="controller__btn"><i class="controller__icon is-left"></i></div>
+			<div class="controller__btn"><i class="controller__icon"></i></div>
+			<div class="controller__btn"><i class="controller__icon is-right"></i></div>
+		</div>
+	</div>
+	<!-- end controller -->
 	<!-- begin footer  -->
-	<footer class="footer is-absolute">
+	<footer class="footer">
 		<div class="footer__in">
 			<div class="footer__el">
 				<a href="#" class="footer__logo"><img src="img/logo-new.png" alt="Lampa"></a>
