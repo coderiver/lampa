@@ -7,11 +7,7 @@
 	<meta name="format-detection" content="telephone=no">
 	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 	<link rel="stylesheet" media="all" href="css/screen.css" >
-	<link rel="stylesheet" media="all" href="css/fancybox.css" >
 	<link rel="stylesheet" media="all" href="css/scroll.css" >
-<!-- 	<script src="http://malsup.github.io/jquery.cycle2.js"></script>
-	<script src="http://malsup.github.io/jquery.cycle2.scrollVert.js"></script> -->
-	<!--[if IE]><script src="js/html5shiv.js"></script><![endif]-->
 </head>
 <body class="is-gray">
 <!-- BEGIN  out-->
@@ -21,7 +17,7 @@
 		<div class="header__top">
 			<div class="header__btn js-btn"><span></span></div>
 			<div class="header__info js-info"><span>i</span></div>
-			<a href="#"><img src="img/logo.png" alt="logo"></a>
+			<a href="#" class="header__logo"><img src="img/logo.png" alt="logo"></a>
 		</div>
 		<nav class="nav">
 			<ul class="js-navigation">
@@ -38,7 +34,7 @@
 	<div class="article">
 		<div class="js-article">
 			<div class="slide">
-				<div class="vertical js-vertical">
+				<div class="js-slick-vertical">
 					<div class="article__bl">
 						<div class="article__in">
 							<h2 class="article__ttl">Ниагарский водопад, вид сверху. Одно из самых впечатляющих зрелищ планеты!</h2>
@@ -47,8 +43,9 @@
 							<a class="article__link" href="#">В галерею</a>
 						</div>
 						<div class="article__in">
-							<div class="article__txt js-scroll" data-mcs-theme="minimal-dark">
-								<p>Дроны уже активно применяются для <a href="#">съемки с высоты</a>, также их перспективу рассмотрели в оборонной промышленности. Однако области применения коптеров постоянно расширяются. <a href="#">Robohunter</a> рассказывает о 15 сферах деятельности, где могут прижиться эти роботизированные установки. Судя по количеству и разнообразию профессий, на смену которым могут прийти БПЛА, можно сказать, что эра дронов наступила!</p>
+							<div class="article__txt" data-mcs-theme="minimal-dark">
+								<p><a href="#">Ниагарский водопад</a> находится на границе между Соединенными Штатами и Канадой и состоит из трех отдельных водопадов - Американского,
+								водопада Фаты и водопада Подковы, который часто называют Канадским из-за того, что он находится на территории Канады.</p>
 							</div>
 						</div>
 					</div>
@@ -60,27 +57,12 @@
 							<a class="article__link" href="#">В галерею</a>
 						</div>
 						<div class="article__in">
-							<div class="article__txt js-scroll" data-mcs-theme="minimal-dark">
+							<div class="article__txt" data-mcs-theme="minimal-dark">
 								<p>Дроны уже активно применяются для <a href="#">съемки с высоты</a>, также их перспективу рассмотрели в оборонной промышленности. Однако области применения коптеров постоянно расширяются. <a href="#">Robohunter</a> рассказывает о 15 сферах деятельности, где могут прижиться эти роботизированные установки. Судя по количеству и разнообразию профессий, на смену которым могут прийти БПЛА, можно сказать, что эра дронов наступила!</p>
 							</div>
 						</div>
 					</div>
 				</div>
-				<!-- <div class="cycle-slideshow"
-				    data-cycle-fx="scrollVert",
-				    data-cycle-timeout="0",
-				    data-cycle-prev="#prev"
-    				data-cycle-next="#next"
-				    >
-				    <img src="http://malsup.github.io/images/p1.jpg">
-				    <img src="http://malsup.github.io/images/p2.jpg">
-				    <img src="http://malsup.github.io/images/p3.jpg">
-				    <img src="http://malsup.github.io/images/p4.jpg">
-				</div>
-				<div class="center">
-				    <a href=# id="prev">Prev</a>
-				    <a href=# id="next">Next</a>
-				</div> -->
 			</div>
 			<div class="slide">
 				<div class="article__bl">
@@ -91,7 +73,7 @@
 						<a class="article__link" href="#">В галерею</a>
 					</div>
 					<div class="article__in">
-						<div class="article__txt js-scroll" data-mcs-theme="minimal-dark">
+						<div class="article__txt" data-mcs-theme="minimal-dark">
 							<p>Дроны уже активно применяются для <a href="#">съемки с высоты</a>, также их перспективу рассмотрели в оборонной промышленности. Однако области применения коптеров постоянно расширяются. <a href="#">Robohunter</a> рассказывает о 15 сферах деятельности, где могут прижиться эти роботизированные установки. Судя по количеству и разнообразию профессий, на смену которым могут прийти БПЛА, можно сказать, что эра дронов наступила!</p>
 						</div>
 					</div>
@@ -106,7 +88,7 @@
 						<a class="article__link" href="#">В галерею</a>
 					</div>
 					<div class="article__in">
-						<div class="article__txt js-scroll" data-mcs-theme="minimal-dark">
+						<div class="article__txt" data-mcs-theme="minimal-dark">
 							<p>Дроны уже активно применяются для <a href="#">съемки с высоты</a>, также их перспективу рассмотрели в оборонной промышленности. Однако области применения коптеров постоянно расширяются. <a href="#">Robohunter</a> рассказывает о 15 сферах деятельности, где могут прижиться эти роботизированные установки. Судя по количеству и разнообразию профессий, на смену которым могут прийти БПЛА, можно сказать, что эра дронов наступила!</p>
 						</div>
 					</div>
@@ -121,7 +103,7 @@
 						<a class="article__link" href="#">В галерею</a>
 					</div>
 					<div class="article__in">
-						<div class="article__txt js-scroll" data-mcs-theme="minimal-dark">
+						<div class="article__txt" data-mcs-theme="minimal-dark">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et aliquam tempora earum dolore a mollitia blanditiis, iusto repellendus nostrum rem laborum. Magni, necessitatibus, rerum. Neque, odit, in! Hic, beatae, enim.</p>
 						</div>
 					</div>
@@ -136,7 +118,7 @@
 						<a class="article__link" href="#">В галерею</a>
 					</div>
 					<div class="article__in">
-						<div class="article__txt js-scroll" data-mcs-theme="minimal-dark">
+						<div class="article__txt" data-mcs-theme="minimal-dark">
 							<p>1111</p>
 						</div>
 					</div>

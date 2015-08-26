@@ -1,12 +1,4 @@
 head.ready(function() {
-	var articleHeight = $('.article__bl').outerHeight();
-
-	function verticalHeight() {
-		$('.js-vertical').css({height: articleHeight});
-	}
-
-	verticalHeight();
-
 	// sidemenu
 	$('.js-btn').click(function() {
 		$('body').addClass('is-overflow');
@@ -28,10 +20,6 @@ head.ready(function() {
 		// scrollbarPosition: 'outside'
 	});
 
-	// $('.article__bl').mCustomScrollbar( 'scrollTo', top, {
-	// 	scrollInertia: 300
-	// });
-
 	// category navigation
 	$('.js-navigation').slick({
 		slidesToShow: 3,
@@ -41,7 +29,8 @@ head.ready(function() {
 		infinite: true,
 		focusOnSelect: true,
 		variableWidth: true,
-		arrows: false
+		arrows: false,
+		mobileFirst: true
 	});
 
 	// article
@@ -50,7 +39,23 @@ head.ready(function() {
 		slidesToScroll: 1,
 		arrows: false,
 		asNavFor: '.js-navigation',
-		infinite: true
+		infinite: true,
+		mobileFirst: true
+	});
+
+	$('.js-slick-vertical').on('swipe', function(event, slick, direction) {
+		console.log('111')
+	});
+
+	// vertical
+	$('.js-slick-vertical').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: false,
+		infinite: false,
+		mobileFirst: true,
+		vertical: true,
+		verticalSwiping: true
 	});
 
 	// popup
