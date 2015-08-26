@@ -64,11 +64,16 @@ body
 	line-height: 1.4
 	&.is-gray
 		background: #f4f4f4
+	&.is-overflow
+		overflow: hidden
 
 .out
 	position: relative
 	min-width: 320px
 	height: 100%
+	+transition(transform 0.3s ease)
+	&.is-moved
+		+transform(translate3d(50%, 0, 0))
 
 // reset
 h1, h2, h3, h4, h5, h6, strong, b
@@ -93,3 +98,6 @@ input[type="search"]::-webkit-search-cancel-button
 	+sr(privacyx2)
 .close_ico
 	+sr(closex2)
+
+.search_ico
+	+svg(search, 17, 17)
