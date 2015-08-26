@@ -1,4 +1,27 @@
 head.ready(function() {
+	// hammer control swipe
+	var horz = document.getElementById('js-horz');
+	// var vert = document.getElementById('js-vert');
+	var options = {preventDefault: true};
+
+	Hammer(horz).on('swipeleft', function() {
+		$('.js-article').slick('slickNext');
+	});
+	Hammer(document.getElementById('js-horz')).on('swiperight', function() {
+		$('.js-article').slick('slickPrev');
+	});
+ //    Hammer(vert).on('swipeup', function() {
+	// 	$('.js-slick-vertical').slick('slickNext');
+	// });
+	// Hammer(document.getElementById('js-vert')).on('swipedown', function() {
+	// 	$('.js-slick-vertical').slick('slickPrev');
+	// });
+
+	// var hammertime = new Hammer(element, options);
+	// hammertime.on('swipedown', function(ev){
+
+	// });
+
 	// sidemenu
 	$('.js-btn').click(function() {
 		$('body').addClass('is-overflow');
@@ -30,7 +53,7 @@ head.ready(function() {
 		focusOnSelect: true,
 		variableWidth: true,
 		arrows: false,
-		mobileFirst: true
+		swipe: false
 	});
 
 	// article
@@ -40,11 +63,7 @@ head.ready(function() {
 		arrows: false,
 		asNavFor: '.js-navigation',
 		infinite: true,
-		mobileFirst: true
-	});
-
-	$('.js-slick-vertical').on('swipe', function(event, slick, direction) {
-		console.log('111')
+		swipe: false
 	});
 
 	// vertical
@@ -55,7 +74,8 @@ head.ready(function() {
 		infinite: false,
 		mobileFirst: true,
 		vertical: true,
-		verticalSwiping: true
+		verticalSwiping: true,
+		swipe: false
 	});
 
 	// popup
