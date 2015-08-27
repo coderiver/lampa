@@ -1,15 +1,15 @@
 head.ready(function() {
+	// hammer used to get more control on swipe
 	var horz = document.getElementById('js-horz');
 	var nav = document.getElementById('js-nav');
-	// var vert = document.getElementById('js-vert');
-	// var options = {preventDefault: true};
+	var vert = document.getElementById('js-vert');
 
-	// hammer control swipe
+	// 3 sliders
 	if ($('#js-horz').length > 0) {
 		Hammer(horz).on('swipeleft', function() {
 			$('.js-article').slick('slickNext');
 		});
-		Hammer(document.getElementById('js-horz')).on('swiperight', function() {
+		Hammer(horz).on('swiperight', function() {
 			$('.js-article').slick('slickPrev');
 		});
 	}
@@ -17,21 +17,24 @@ head.ready(function() {
 		Hammer(nav).on('swipeleft', function() {
 			$('.js-navigation').slick('slickNext');
 		});
-		Hammer(document.getElementById('js-nav')).on('swiperight', function() {
+		Hammer(nav).on('swiperight', function() {
 			$('.js-navigation').slick('slickPrev');
 		});
 	}
-	 //    Hammer(vert).on('swipeup', function() {
-		// 	$('.js-slick-vertical').slick('slickNext');
-		// });
-		// Hammer(document.getElementById('js-vert')).on('swipedown', function() {
-		// 	$('.js-slick-vertical').slick('slickPrev');
-		// });
-
-		// var hammertime = new Hammer(element, options);
-		// hammertime.on('swipedown', function(ev){
-
-		// });
+	if ($('#js-vert').length > 0){
+		var mc = new Hammer(vert);
+		mc.get('swipe').set({
+			direction: Hammer.DIRECTION_ALL,
+			threshold: 0.5,
+			velocity: 0.1
+		});
+		Hammer(vert).on('swipeup', function() {
+			$('.js-slick-vertical').slick('slickNext');
+		});
+		Hammer(vert).on('swipedown', function() {
+			$('.js-slick-vertical').slick('slickPrev');
+		});
+	}
 
 	// sidemenu
 	$('.js-btn').click(function() {
@@ -51,7 +54,6 @@ head.ready(function() {
 	// scroll
 	$('.js-scroll').mCustomScrollbar({
 		scrollInertia: 300
-		// scrollbarPosition: 'outside'
 	});
 
 	// category navigation
