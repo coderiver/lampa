@@ -1,5 +1,8 @@
 //header
 .header
+	position: absolute
+	left: 0
+	right: 0
 	background: #FFF
 	border-bottom: 2px solid #d6d6d6
 	z-index: 2
@@ -160,10 +163,18 @@
 // article
 .article
 	position: relative
+	height: 100%
 	+box
 	+clr
+	@media only screen and (orientation: landscape)
+		height: auto
+	&__pad
+		padding-top: 9rem
+		&.-pad-top
+			padding-top: 5rem
 	&__bl
 		padding: 1rem 0
+
 	&__in
 		margin: 0 9px
 		padding: 0 10px
@@ -234,12 +245,13 @@
 
 // social
 .social
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
 	font-size: 0
-	// +rhmin(667)
-	// 	position: absolute
-	// 	left: 0
-	// 	right: 0
-	// 	bottom: 0
+	@media only screen and (orientation: landscape)
+		position: static
 	&__icon
 		display: inline-block
 		width: 20%
@@ -253,7 +265,7 @@
 		&:last-child
 			padding-right: 0
 		&-in
-			padding: 8px 10px
+			padding: 6px 10px 2px
 			&.-bg-fb
 				background: #486caa
 			&.-bg-tw

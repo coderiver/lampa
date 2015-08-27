@@ -76,10 +76,12 @@ body
 .out
 	position: relative
 	min-width: 320px
-	//height: 100%
+	height: 100%
 	+transition(transform 0.3s ease)
 	&.is-moved
 		+transform(translate3d(50%, 0, 0))
+	@media only screen and (orientation: landscape)
+		height: auto
 
 // reset
 h1, h2, h3, h4, h5, h6, strong, b
