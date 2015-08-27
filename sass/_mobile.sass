@@ -3,8 +3,10 @@
 	background: #FFF
 	border-bottom: 2px solid #d6d6d6
 	z-index: 2
+	&.-no-border
+		border-bottom: none
 	&__top
-		padding: 10px 10px 9px
+		padding: 1rem 1rem 0.9rem
 		text-align: center
 		border-bottom: 1px solid #D6D6D6
 		+box
@@ -31,7 +33,12 @@
 			bottom: 6px
 	&__logo
 		display: inline-block
-		max-width: 66px
+		max-width: 6.6rem
+		&.-pos-absolute
+			position: absolute
+			top: 10px
+			left: 50%
+			margin-left: -3.3rem
 		img
 			width: 100%
 	&__info
@@ -49,13 +56,23 @@
 			display: inline-block
 			font-size: 16px
 			vertical-align: middle
+	&__back
+		float: left
+	&__links
+		float: right
+		font-size: 0
+	&__icon
+		display: inline-block
+		vertical-align: middle
+	.more_ico
+		margin-right: 14px
 
 //navigation
 .nav
 	font-size: 0
 	li
 		display: inline-block
-		margin: 0 22px
+		margin: 0 20px
 		text-align: center
 		vertical-align: top
 		&:last-child
@@ -70,10 +87,9 @@
 		position: relative
 		display: inline-block
 		padding: 15px 0
-		font-size: 12px
+		font-size: 1.2rem
 		color: #9d9d9d
 		text-transform: uppercase
-		+lucida
 		&:before
 			display: none
 			content: ""
@@ -111,18 +127,18 @@
 		a
 			display: block
 			padding: 10px 15px 12px
-			font-size: 14px
+			font-size: 1.4rem
 			color: #525252
 			border-bottom: 1px solid #b0b0b0
-			+lucida
+
 			&:hover
 				p
 					text-decoration: underline
 		p
-			font-size: 14px
+			font-size: 1.4rem
 		small
 			color: #b0b0b0
-			font-size: 12px
+			font-size: 1.2rem
 	.mCSB_scrollTools
 		width: 4px
 
@@ -138,40 +154,65 @@
 	input
 		width: 100%
 		padding: 15px
-		font-size: 14px
-		+lucida
+		font-size: 1.2rem
 		+placeholder-color(#9d9d9d)
 
 // article
 .article
 	position: relative
-	height: 100%
 	+box
 	+clr
 	&__bl
-		max-height: 460px
-		padding: 10px 0
-		overflow: hidden
+		padding: 1rem 0
 	&__in
 		margin: 0 9px
 		padding: 0 10px
 		background: #FFF
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
 	&__ttl
 		padding: 12px 0 7px
-		font-size: 17px
+		font-size: 1.7rem
 		color: #000
-		line-height: 1.25
-		+lucida
+		line-height: 1.2
 	&__img
 		position: relative
 		display: block
 		width: 100%
-		height: 226px
+		height: 22.6rem
 		+cover
+	&__gallery
+		position: relative
+		&-slide
+			div
+				height: 22.6rem
+				+cover
+		.slick-prev,
+		.slick-next
+			top: initial
+			bottom: 12px
+			margin-top: 0
+			z-index: 2
+		.slick-prev
+			left: 10px
+		.slick-next
+			right: 10px
+	&__overlay
+		position: absolute
+		left: 0
+		right: 0
+		bottom: 0
+		height: 44px
+		background: rgba(0, 0, 0, 0.4)
 	&__txt
-		padding: 25px 0
-		height: 115px
-		overflow: hidden
+		height: 14rem
+		padding: 10px 0
+		font-size: 1.4rem
+		color: #424242
+		line-height: 1.2
+		+box
+		p
+			height: 11.5rem
+			overflow: hidden
 	a
 		color: #62b7ff
 		text-decoration: underline
@@ -184,12 +225,51 @@
 		text-transform: uppercase
 		text-align: center
 		text-decoration: none
-		background: rgba(#000, 0.5)
+		background: rgba(0, 0, 0, 0.4)
 		color: #FFF
 
 //vertical
 .vertical
 	overflow-y: auto
+
+// social
+.social
+	font-size: 0
+	// +rhmin(667)
+	// 	position: absolute
+	// 	left: 0
+	// 	right: 0
+	// 	bottom: 0
+	&__icon
+		display: inline-block
+		width: 20%
+		padding: 0 0.5px
+		text-align: center
+		vertical-align: top
+		+box
+		+vertical
+		&:first-child
+			padding-left: 0
+		&:last-child
+			padding-right: 0
+		&-in
+			padding: 8px 10px
+			&.-bg-fb
+				background: #486caa
+			&.-bg-tw
+				background: #00baf3
+			&.-bg-vk
+				background: #41689b
+			&.-bg-g
+				background: #e76140
+		p
+			margin-top: 2px
+			font-size: 1.2rem
+			color: #fff
+			line-height: 1.85
+		i
+			font-size: 1.6rem
+			color: #FFF
 
 //overlay
 .overlay

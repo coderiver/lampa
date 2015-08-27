@@ -49,19 +49,25 @@
 
 
 // fonts
-+font("Lucida Grande", lucida-grande)
++font("helvetica-neue", helvetica-neue)
 
-=git
-	font-family: "Georgia", Arial, sans-serif
-	font-style: italic
+=helvetica
+	font-family: "helvetica-neue", Helvetica, Arial, sans-serif
+	font-weight: normal
 
-=lucida
-	font-family: "Lucida Grande", Arial, sans-serif
+html
+	font-size: 62.5%
+	font-size: 3.125vmin
+	// +r(320)
+	// 	font-size: 51.55%
+	+iphone4
+		font-size: 52.1%
+	+iphone3
+		font-size: 52.1%
 
 body
-	font-family: Arial, sans-serif
-	font-size: 12px
 	line-height: 1.4
+	+helvetica
 	&.is-gray
 		background: #f4f4f4
 	&.is-overflow
@@ -70,7 +76,7 @@ body
 .out
 	position: relative
 	min-width: 320px
-	height: 100%
+	//height: 100%
 	+transition(transform 0.3s ease)
 	&.is-moved
 		+transform(translate3d(50%, 0, 0))
@@ -82,9 +88,6 @@ i
 	font-style: normal
 a
 	text-decoration: none
-p
-	font-size: 16px
-	line-height: 1.35
 
 input[type="search"]::-webkit-search-cancel-button
 	display: none
@@ -101,3 +104,9 @@ input[type="search"]::-webkit-search-cancel-button
 
 .search_ico
 	+svg(search, 17, 17)
+.back_ico
+	+svg(back, 22, 22)
+.more_ico
+	+svg(more, 22, 22)
+.link_ico
+	+svg(share-link, 22, 22)

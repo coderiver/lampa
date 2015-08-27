@@ -1,26 +1,37 @@
 head.ready(function() {
-	// hammer control swipe
 	var horz = document.getElementById('js-horz');
+	var nav = document.getElementById('js-nav');
 	// var vert = document.getElementById('js-vert');
-	var options = {preventDefault: true};
+	// var options = {preventDefault: true};
 
-	Hammer(horz).on('swipeleft', function() {
-		$('.js-article').slick('slickNext');
-	});
-	Hammer(document.getElementById('js-horz')).on('swiperight', function() {
-		$('.js-article').slick('slickPrev');
-	});
- //    Hammer(vert).on('swipeup', function() {
-	// 	$('.js-slick-vertical').slick('slickNext');
-	// });
-	// Hammer(document.getElementById('js-vert')).on('swipedown', function() {
-	// 	$('.js-slick-vertical').slick('slickPrev');
-	// });
+	// hammer control swipe
+	if ($('#js-horz').length > 0) {
+		Hammer(horz).on('swipeleft', function() {
+			$('.js-article').slick('slickNext');
+		});
+		Hammer(document.getElementById('js-horz')).on('swiperight', function() {
+			$('.js-article').slick('slickPrev');
+		});
+	}
+	if ($('#js-nav').length > 0) {
+		Hammer(nav).on('swipeleft', function() {
+			$('.js-navigation').slick('slickNext');
+		});
+		Hammer(document.getElementById('js-nav')).on('swiperight', function() {
+			$('.js-navigation').slick('slickPrev');
+		});
+	}
+	 //    Hammer(vert).on('swipeup', function() {
+		// 	$('.js-slick-vertical').slick('slickNext');
+		// });
+		// Hammer(document.getElementById('js-vert')).on('swipedown', function() {
+		// 	$('.js-slick-vertical').slick('slickPrev');
+		// });
 
-	// var hammertime = new Hammer(element, options);
-	// hammertime.on('swipedown', function(ev){
+		// var hammertime = new Hammer(element, options);
+		// hammertime.on('swipedown', function(ev){
 
-	// });
+		// });
 
 	// sidemenu
 	$('.js-btn').click(function() {
@@ -76,6 +87,14 @@ head.ready(function() {
 		vertical: true,
 		verticalSwiping: true,
 		swipe: false
+	});
+
+	// gallery page
+	$('.js-gallery').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: true,
+		mobileFirst: true
 	});
 
 	// popup
