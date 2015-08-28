@@ -49,10 +49,10 @@
 
 
 // fonts
-+font("helvetica-neue", helvetica-neue)
++font("sf-regular", sf-regular)
 
-=helvetica
-	font-family: "helvetica-neue", Helvetica, Arial, sans-serif
+=sf
+	font-family: "sf-regular", Helvetica, Arial, sans-serif
 	font-weight: normal
 
 html
@@ -64,10 +64,12 @@ html
 		font-size: 52.1%
 	+iphone3
 		font-size: 52.1%
+	+lsc
+		font-size: 62.5%
 
 body
 	line-height: 1.4
-	+helvetica
+	+sf
 	&.is-gray
 		background: #f4f4f4
 	&.is-overflow
@@ -80,7 +82,7 @@ body
 	+transition(transform 0.3s ease)
 	&.is-moved
 		+transform(translate3d(50%, 0, 0))
-	@media only screen and (orientation: landscape)
+	+lsc
 		height: auto
 
 // reset
@@ -103,12 +105,21 @@ input[type="search"]::-webkit-search-cancel-button
 	+sr(privacyx2)
 .close_ico
 	+sr(closex2)
+.menu_ico
+	+sr(menux2)
 
-.search_ico
-	+svg(search, 17, 17)
-.back_ico
-	+svg(back, 22, 22)
-.more_ico
-	+svg(more, 22, 22)
-.link_ico
-	+svg(share-link, 22, 22)
+.icon-back,
+.icon-more,
+.icon-share-link
+	font-size: 2.2rem
+	color: #000
+
+.icon-search
+	font-size: 2.2rem
+
+.icon-clock,
+.icon-link-grey
+	font-size: 1.8rem
+
+.icon-view
+	font-size: 1.6rem

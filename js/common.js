@@ -25,7 +25,7 @@ head.ready(function() {
 		var mc = new Hammer(vert);
 		mc.get('swipe').set({
 			direction: Hammer.DIRECTION_ALL,
-			threshold: 0.5,
+			threshold: 5,
 			velocity: 0.1
 		});
 		Hammer(vert).on('swipeup', function() {
@@ -105,8 +105,14 @@ head.ready(function() {
 		$('body').addClass('is-overflow');
 	});
 
+	$('.js-more').click(function() {
+		$('.js-more-popup').addClass('is-active');
+		$('body').addClass('is-overflow');
+	});
+
 	$('.js-close').click(function() {
 		$('.js-popup').removeClass('is-active');
+		$('.js-more-popup').removeClass('is-active');
 		$('body').removeClass('is-overflow');
 	});
 });

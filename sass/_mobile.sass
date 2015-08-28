@@ -4,42 +4,32 @@
 	left: 0
 	right: 0
 	background: #FFF
-	border-bottom: 2px solid #d6d6d6
 	z-index: 2
+	+lsc
+		position: static
 	&.-no-border
 		border-bottom: none
 	&__top
+		height: 7vh
 		padding: 1rem 1rem 0.9rem
 		text-align: center
 		border-bottom: 1px solid #D6D6D6
 		+box
 		+clr
+		+lsc
+			height: auto
 	&__btn
 		position: relative
 		float: left
-		width: 24px
-		height: 24px
-		border: 1px solid #000
 		cursor: pointer
-		+box
-		&:before,
-		&:after
-			content: ""
-			position: absolute
-			left: 0
-			right: 0
-			height: 1px
-			background: #000
-		&:before
-			top: 6px
-		&:after
-			bottom: 6px
+		.menu_ico
+			display: inline-block
 	&__logo
 		display: inline-block
 		max-width: 6.6rem
 		&.-pos-absolute
 			position: absolute
-			top: 10px
+			top: 1rem
 			left: 50%
 			margin-left: -3.3rem
 		img
@@ -67,12 +57,17 @@
 	&__icon
 		display: inline-block
 		vertical-align: middle
-	.more_ico
-		margin-right: 14px
+	.icon-more
+		margin-right: 12px
 
 //navigation
 .nav
+	height: 7vh
 	font-size: 0
+	border-bottom: 2px solid #d6d6d6
+	+box
+	+lsc
+		height: auto
 	li
 		display: inline-block
 		margin: 0 20px
@@ -89,19 +84,22 @@
 	a
 		position: relative
 		display: inline-block
-		padding: 15px 0
 		font-size: 1.2rem
 		color: #9d9d9d
 		text-transform: uppercase
+		line-height: 7vh
+		+lsc
+			padding: 1.5rem 0
+			line-height: 1
 		&:before
 			display: none
 			content: ""
 			position: absolute
 			left: 0
 			right: 0
-			bottom: -1px
+			bottom: 0
 			background: #000
-			height: 4px
+			height: 2px
 
 
 // leftnav
@@ -113,7 +111,6 @@
 	background: #FFF
 	border-right: 1px solid #b0b0b0
 	z-index: 11
-	padding: 5px 0
 	+box
 	+transform(translate3d(-100%, 0, 0))
 	+transition(transform 0.3s ease)
@@ -129,11 +126,10 @@
 					border: none
 		a
 			display: block
-			padding: 10px 15px 12px
+			padding: 8px 15px 5px
 			font-size: 1.4rem
 			color: #525252
 			border-bottom: 1px solid #b0b0b0
-
 			&:hover
 				p
 					text-decoration: underline
@@ -148,17 +144,22 @@
 .search
 	position: relative
 	display: block
+	height: 7vmax
 	border-bottom: 1px solid #b0b0b0
-	&_ico
-		position: absolute
-		top: 50%
-		margin-top: -9px
-		right: 15px
+	+box
 	input
 		width: 100%
-		padding: 15px
-		font-size: 1.2rem
+		height: 100%
+		padding: 0 15px
+		font-size: 1.7rem
 		+placeholder-color(#9d9d9d)
+	.icon-search
+		position: absolute
+		top: 50%
+		right: 15px
+		margin-top: -11px
+		color: #62b7ff
+		background: none
 
 // article
 .article
@@ -166,36 +167,45 @@
 	height: 100%
 	+box
 	+clr
-	@media only screen and (orientation: landscape)
+	+lsc
 		height: auto
 	&__pad
-		padding-top: 10rem
+		padding-top: 16vh
+		height: 100%
+		+box
+		+lsc
+			padding: 2vw 0
 		&.-pad-top
-			padding-top: 5rem
+			padding: 9vh 0
+			+lsc
+				padding: 2vw 0
 	&__bl
-		padding: 1rem 0
-
-	&__in
+		height: 100%
 		margin: 0 9px
-		padding: 0 10px
 		background: #FFF
 		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2)
+	&__in
+		padding: 0 10px
 	&__ttl
+		height: 10vh
 		padding: 12px 0 7px
 		font-size: 1.7rem
 		color: #000
 		line-height: 1.2
+		+lsc
+			height: auto
 	&__img
 		position: relative
 		display: block
-		width: 100%
-		height: 22.6rem
+		height: 44vh
+		margin: 0 -9px
 		+cover
 	&__gallery
 		position: relative
+		margin: 0 -9px
 		&-slide
 			div
-				height: 22.6rem
+				height: 44vmax
 				+cover
 		.slick-prev,
 		.slick-next
@@ -250,8 +260,11 @@
 	right: 0
 	bottom: 0
 	font-size: 0
-	@media only screen and (orientation: landscape)
+	height: 7vh
+	overflow: hidden
+	+lsc
 		position: static
+		height: auto
 	&__icon
 		display: inline-block
 		width: 20%
@@ -265,7 +278,7 @@
 		&:last-child
 			padding-right: 0
 		&-in
-			padding: 6px 10px 2px
+			padding: 0.3rem 1rem 0.2rem
 			&.-bg-fb
 				background: #486caa
 			&.-bg-tw

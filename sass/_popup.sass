@@ -6,7 +6,7 @@
 	right: 0
 	bottom: 0
 	padding: 20px 15px
-	background: rgba(#fff, 0.8)
+	background: rgba(255, 255, 255, 0.95)
 	z-index: 10
 	white-space: nowrap
 	overflow: auto
@@ -25,11 +25,11 @@
 
 .popup
 	display: inline-block
-	font-size: 20px
 	vertical-align: middle
 	white-space: normal
 	&__list
 		text-align: left
+		font-size: 2.1rem
 		li
 			&:last-child
 				a
@@ -46,3 +46,33 @@
 			top: 50%
 			left: 0
 			margin-top: -16px
+	&__txt
+		text-align: left
+		font-size: 1.7rem
+		a
+			text-decoration: underline
+			color: #62b7ff
+
+
+.info
+	position: absolute
+	left: 15px
+	right: 15px
+	bottom: 2.3rem
+	color: #b0b0b0
+	font-size: 1.2rem
+	line-height: 28px
+	&__bl
+		p
+			display: inline-block
+			margin: 0 15px
+			vertical-align: middle
+	a
+		text-decoration: underline
+		color: #62b7ff
+	i
+		margin-right: 6px
+		vertical-align: middle
+	span
+		display: inline-block
+		vertical-align: middle

@@ -12,12 +12,12 @@
 <!-- BEGIN  out-->
 <div class="out">
 	<!-- begin header  -->
-	<header class="header -no-border" >
+	<header class="header -no-nav -no-border" >
 		<div class="header__top ">
-			<a href="#" class="header__back"><i class="back_ico"></i></a>
+			<a href="#" class="header__back"><i class="icon-back"></i></a>
 			<div class="header__links">
-				<a href="#" class="header__icon"><i class="more_ico"></i></a>
-				<a href="#" class="header__icon"><i class="link_ico"></i></a>
+				<a href="#" class="header__icon js-more"><i class="icon-more"></i></a>
+				<a href="#" class="header__icon"><i class="icon-share-link"></i></a>
 			</div>
 			<a href="#" class="header__logo -pos-absolute"><img src="img/logo.png" alt="logo"></a>
 		</div>
@@ -80,14 +80,19 @@
 </div>
 <!-- END out-->
 <!-- begin popup-wrap  -->
-<div class="popup-wrap js-popup">
+<div class="popup-wrap js-more-popup">
 	<button type="button" class="close_ico js-close"></button>
 	<div class="popup">
-		<ul class="popup__list">
-			<li><a href="#"><i class="flag_ico"></i>О проекте</a></li>
-			<li><a href="#"><i class="ad_ico"></i>Реклама</a></li>
-			<li><a href="#"><i class="privacy_ico"></i>Политика конфиденциальности</a></li>
-		</ul>
+		<div class="popup__txt">
+			<p><a href="#">Ниагарский водопад</a> находится на границе между Соединенными Штатами и Канадой и состоит из трех отдельных водопадов — Американского, водопада Фаты и водопада Подковы, который часто называют Канадским из-за того, что он находится на территории Канады.</p>
+		</div>
+	</div>
+	<div class="info">
+		<div class="info__bl">
+			<p><i class="icon-clock"></i><span>24 минуты назад</span></p>
+			<p><i class="icon-view"></i><span>Просмотров 1724</span></p>
+		</div>
+		<p class="info__source"><i class="icon-link-grey"></i><span>Источник: <a href="#">medium.com</span></a></p>
 	</div>
 </div>
 <!-- end popup-wrap -->
