@@ -1,10 +1,6 @@
 head.ready(function() {
 
 	$(window).resize(function() {
-		var w = "sfgdh";
-
-		console.log(w);
-
 		if($(window).width() < 769) {
 			$('.js-category').removeClass('is-active');
 		}

@@ -50,6 +50,10 @@
 
 //fonts
 +font("Lucida Grande", lucida-grande)
++font("sf-regular", sf-regular)
+=sf
+	font-family: "sf-regular", Helvetica, Arial, sans-serif
+	font-weight: normal
 
 =git
 	font-family: "Georgia", Arial, sans-serif
@@ -59,15 +63,15 @@
 	font-family: "Lucida Grande", Arial, sans-serif
 
 body
-	font-family: Arial, sans-serif
 	font-size: 12px
 	line-height: 1.4
+	+sf
 	&.is-gray
 		background: #f4f4f4
 
 .out
 	position: relative
-	min-width: 400px
+	min-width: 768px
 	height: 100%
 	.inner
 		height: 100%

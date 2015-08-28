@@ -1,15 +1,13 @@
 //header
 .header
 	position: absolute
-	min-width: 400px
+	min-width: 768px
 	min-height: 60px
 	left: 0
 	right: 0
 	background: #FFF
 	border-bottom: 2px solid #d6d6d6
 	z-index: 2
-	+r(768)
-		position: fixed
 
 .view
 	font-size: 0
@@ -77,8 +75,6 @@
 			+transform(rotateZ(45deg))
 		&:after
 			+transform(rotateZ(-45deg))
-	// +r(768)
-	// 	display: block
 
 //navigation
 .nav
@@ -98,7 +94,6 @@
 		font-size: 12px
 		color: #9d9d9d
 		text-transform: uppercase
-		+lucida
 		&:before
 			top: inherit
 			left: 0
@@ -120,35 +115,6 @@
 		a
 			margin: 0 5px
 			font-size: 10px
-	// +r(768)
-	// 	position: absolute
-	// 	display: block
-	// 	top: 62px
-	// 	right: 15px
-	// 	max-height: 320px
-	// 	padding: 10px 20px
-	// 	background: #fff
-	// 	box-shadow: 0px 0 1px 0px #9d9d9d, 0px 0 1px 0px #9d9d9d
-	// 	opacity: 0
-	// 	visibility: hidden
-	// 	overflow-Y: auto
-	// 	+transition(all 0.2s ease)
-	// 	&.is-active
-	// 		opacity: 1
-	// 		visibility: visible
-	// 	li
-	// 		display: block
-	// 		margin: 5px 0
-	// 		&:last-child a
-	// 			margin-left: 0
-	// 	a
-	// 		display: inline-block
-	// 		margin: 0
-	// 		padding: 8px 0
-	// +r(500)
-	// 	left: 0
-	// 	right: 0
-
 
 .subcategory
 	display: none
@@ -166,7 +132,7 @@
 	opacity: 0
 	visibility: hidden
 	z-index: 2
-	+lucida
+	+sf
 	+transition(all 0.2s ease)
 	&:before,
 	&:after
@@ -272,7 +238,6 @@
 	&__in
 		height: 100%
 		padding: 20px
-		font-family: Georgia, serif
 		font-size: 16px
 		line-height: 26px
 		color: #000
@@ -290,7 +255,6 @@
 		font-size: 28px
 		color: #000
 		line-height: 1.25
-		+lucida
 	&__info
 		font-size: 0
 		i
@@ -303,7 +267,6 @@
 			font-size: 14px
 			color: #b0b0b0
 			vertical-align: middle
-			+lucida
 		.clock_ico,
 		.view_ico
 			margin-top: -2px
@@ -316,7 +279,6 @@
 		color: #525252
 		line-height: 22px
 		border-bottom: 1px solid #b0b0b0
-		+lucida
 	+r(1000)
 		padding-bottom: 85px
 
@@ -413,7 +375,6 @@
 		width: 100%
 		padding: 15px
 		font-size: 14px
-		+lucida
 		+placeholder-color(#9d9d9d)
 
 //footer
@@ -458,7 +419,6 @@
 		padding-left: 25px
 		font-size: 14px
 		color: #979797
-		+lucida
 		&:before
 			content: ""
 			position: absolute
