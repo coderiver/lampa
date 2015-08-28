@@ -125,14 +125,13 @@
 	position: absolute
 	top: 55px
 	right: 15px
-	min-width: 480px
+	max-width: 480px
 	font-size: 0
 	background: #fff
 	border: 1px solid #d6d6d6
 	opacity: 0
 	visibility: hidden
 	z-index: 2
-	+sf
 	+transition(all 0.2s ease)
 	&:before,
 	&:after
@@ -156,9 +155,11 @@
 		border-top: 2px solid #d6d6d6
 		padding: 15px 10px
 	&__list
-		display: inline-block
-		width: 33%
 		font-size: 12px
+		+clr
+		li
+			float: left
+			width: 33%
 		a
 			display: inline-block
 			padding: 5px 10px
@@ -227,9 +228,11 @@
 			display: block
 		.article__in
 			float: right
-			width: calc(100% - 221px)
+			width: calc(100% - 220px)
 		.side-slider
 			position: absolute
+			width: 100%
+			max-width: 220px
 			visibility: hidden
 		.slidr
 			float: none
@@ -255,6 +258,7 @@
 		font-size: 28px
 		color: #000
 		line-height: 1.25
+		+git
 	&__info
 		font-size: 0
 		i
@@ -286,7 +290,7 @@
 	float: left
 	width: 75%
 	max-width: 680px
-	max-height: 375px
+	max-height: 385px
 	overflow: hidden
 	+box
 	&:first-child
@@ -295,6 +299,7 @@
 		display: none
 		width: 100%
 	.slick-next
+		padding: 10px
 		margin-top: -9px
 		right: 20px
 		+svg(arr-next, 30, 18)
@@ -302,6 +307,7 @@
 		&:hover
 			+transform(translateX(5px))
 	.slick-prev
+		padding: 10px
 		margin-top: -9px
 		left: 20px
 		+svg(arr-prev, 30, 18)
@@ -310,15 +316,14 @@
 			+transform(translateX(-5px))
 
 .side-slider
-	width: 23%
+	width: 25%
 	max-width: 220px
-	max-height: 385px
 	padding-left: 20px
 	overflow: hidden
 	+box
 	&__img
 		display: block
-		width: 100%
+		width: 220px
 		padding: 10px 0
 		cursor: pointer
 		+box
@@ -383,7 +388,7 @@
 	left: 0
 	right: 0
 	bottom: 0
-	min-width: 400px
+	min-width: 768px
 	padding: 14.5px 0
 	text-align: center
 	box-shadow: inset 0 1px 0 #d6d6d6
@@ -412,6 +417,7 @@
 			display: inline-block
 			font-size: 12px
 			vertical-align: middle
+			font-style: italic
 	&__link
 		position: relative
 		display: inline-block
