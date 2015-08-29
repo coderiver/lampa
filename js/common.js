@@ -1,4 +1,5 @@
 head.ready(function() {
+	$.nonbounce();
 	// hammer used to get more control on swipe
 	var horz = document.getElementById('js-horz');
 	var nav = document.getElementById('js-nav');
