@@ -78,7 +78,6 @@
 
 //navigation
 .nav
-	position: relative
 	float: left
 	font-size: 0
 	li
@@ -88,6 +87,7 @@
 			a
 				margin-left: 15px
 	a
+		position: relative
 		display: block
 		margin: 0 10px
 		padding: 24px 0
@@ -95,7 +95,8 @@
 		color: #9d9d9d
 		text-transform: uppercase
 		&:before
-			top: inherit
+			content: ""
+			position: absolute
 			left: 0
 			right: 0
 			bottom: -1px
@@ -254,11 +255,11 @@
 			&:hover
 				text-decoration: none
 	&__ttl
+		max-width: 850px
 		margin-bottom: 7px
 		font-size: 28px
 		color: #000
 		line-height: 1.25
-		+git
 	&__info
 		font-size: 0
 		i
@@ -371,6 +372,7 @@
 	position: relative
 	display: block
 	border-bottom: 1px solid #b0b0b0
+	-webkit-appearance: none
 	&_ico
 		position: absolute
 		top: 50%
