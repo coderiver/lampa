@@ -1,4 +1,7 @@
-head.ready(function() {
+$(document).ready(function() {
+	
+// });
+// head.ready(function() {
 
 	// $(window).resize(function() {
 	// 	if($(window).width() < 769) {
