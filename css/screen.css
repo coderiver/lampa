@@ -172,7 +172,7 @@ input[type="search"]::-webkit-search-cancel-button { display: none; }
 .search input:-moz-placeholder, .search input::-moz-placeholder { color: #9d9d9d; opacity: 1; }
 .search input::-webkit-input-placeholder { color: #9d9d9d; }
 
-.footer { position: absolute; left: 0; right: 0; bottom: 0; min-width: 768px; padding: 14.5px 0; text-align: center; box-shadow: inset 0 1px 0 #d6d6d6; background: #fff; position: fixed; }
+.footer { position: absolute; left: 0; right: 0; bottom: 0; min-width: 768px; padding: 14.5px 0; text-align: center; box-shadow: inset 0 1px 0 #d6d6d6; background: #fff; position: fixed; z-index: 1000; }
 .footer__in { *zoom: 1; }
 .footer__in:after { content: " "; display: table; clear: both; }
 .footer__logo { display: inline-block; margin-left: 20px; vertical-align: middle; }
