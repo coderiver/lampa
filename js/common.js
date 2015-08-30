@@ -52,13 +52,7 @@ $(document).ready(function() {
 			$('.js-main').addClass('is-two-col');
 		} else{
 			$('.js-main').removeClass('is-two-col');
-
-			// fire slick reinit on view change
-			// $('.js-vertical').slick('reinit');
 		}
-
-		// fire slick reinit on view change
-		// $('.js-slidr').slick('reinit');
 
 	});
 
@@ -66,13 +60,11 @@ $(document).ready(function() {
 	$('.js-info').click(function(e){
 		e.preventDefault();
 		$('.js-popup').addClass('is-active');
-		$('.js-link').removeClass('is-active');
 	});
 
 	$('.js-copy').click(function(e){
 		e.preventDefault();
 		$('.js-link').addClass('is-active');
-		$('.js-popup').removeClass('is-active');
 	});
 
 	$('.js-close').click(function () {
@@ -80,20 +72,20 @@ $(document).ready(function() {
 	});
 
 	// vertical slider height
-	function verticalHeight(){
+	// function verticalHeight(){
 
-		var v = $('.js-vertical');
-		var mainSliderHeight = $('.slidr').outerHeight();
+	// 	var v = $('.js-vertical');
+	// 	var mainSliderHeight = $('.slidr').outerHeight();
 
-		v.css({height: mainSliderHeight});
+	// 	v.css({height: mainSliderHeight});
 
-		$(window).resize(function(){
-			var mainSliderHeight = $('.slidr').outerHeight();
-			v.css({height: mainSliderHeight});
-		});
+	// 	$(window).resize(function(){
+	// 		var mainSliderHeight = $('.slidr').outerHeight();
+	// 		v.css({height: mainSliderHeight});
+	// 	});
 
-	}
+	// }
 
-	verticalHeight();
+	// verticalHeight();
 
 });
