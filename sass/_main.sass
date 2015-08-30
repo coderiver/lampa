@@ -78,6 +78,7 @@
 
 //navigation
 .nav
+	position: relative
 	float: left
 	font-size: 0
 	li
@@ -109,7 +110,7 @@
 				display: block
 				height: 3px
 	+r(1000)
-		float: right
+		float: left
 		li
 			&:last-child a
 				margin-left: 5px
@@ -125,7 +126,7 @@
 .category
 	position: absolute
 	top: 55px
-	right: 15px
+	right: 0
 	max-width: 480px
 	font-size: 0
 	background: #fff
@@ -138,7 +139,7 @@
 	&:after
 		content: ""
 		position: absolute
-		right: 55px
+		right: 40px
 	&:before
 		top: -11px
 		+arr(25, 10, #d6d6d6, t)
@@ -160,6 +161,7 @@
 		+clr
 		li
 			float: left
+			display: block
 			width: 33%
 		a
 			display: inline-block
@@ -170,13 +172,6 @@
 				text-decoration: underline
 			&:before
 				display: none
-	+r(1000)
-		&:before, &:after
-			right: 31px
-		&__list
-			font-size: 10px
-		&__name
-			font-size: 10px
 
 //controller
 .controller
@@ -279,27 +274,32 @@
 	&__bl
 		margin-top: 20px
 		+clr
+		&.txt-font
+			font-family: Georgia, serif
+		&.is-overflow
+			max-height: 385px
+			overflow: hidden
 	&__describe
 		padding-bottom: 13px
 		font-size: 14px
 		color: #525252
 		line-height: 22px
 		border-bottom: 1px solid #b0b0b0
+		+sf
 	+r(1000)
 		padding-bottom: 85px
 
 .slidr
-	float: left
-	width: 75%
-	max-width: 680px
 	max-height: 385px
 	overflow: hidden
 	+box
 	&:first-child
 		display: block
-	img
-		display: none
-		width: 100%
+	.slick-slide
+		img
+			width: 100%
+			height: 100%
+			max-height: 385px
 	.slick-next
 		padding: 10px
 		margin-top: -9px
@@ -318,23 +318,22 @@
 			+transform(translateX(-5px))
 
 .side-slider
+	float: right
 	width: 25%
 	max-width: 220px
+	margin-top: -10px
 	padding-left: 20px
-	overflow: hidden
 	+box
 	&__img
-		display: block
-		width: 220px
-		padding: 10px 0
 		cursor: pointer
 		+box
 		&:last-child
 			padding-bottom: 0
 		img
 			width: 100%
-	.slick-track
-		top: -20px
+			// max-height: 120px
+			padding-bottom: 20px
+			+box
 
 //leftnav
 .sidebar
@@ -345,7 +344,6 @@
 	padding: 5px 0
 	overflow-y: auto
 	border-right: 1px solid #b0b0b0
-	+sf
 	+box
 	&__list
 		li
@@ -368,6 +366,7 @@
 		small
 			color: #b0b0b0
 			font-size: 12px
+			line-height: 15px
 	.mCSB_scrollTools
 		width: 4px
 

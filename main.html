@@ -21,7 +21,7 @@
 				<a href='#' class="view__icon is-active js-view"></a>
 				<a href='#' class="view__icon js-view two-col"></a>
 			</div>
-			<nav class="nav js-nav js-scroll" data-mcs-theme="minimal-dark">
+			<nav class="nav js-nav">
 				<ul>
 					<li><a href="#"><span>Все новости</span></a></li>
 					<li><a href="#"><span>Политика</span></a></li>
@@ -33,26 +33,26 @@
 					<li><a href="#"><span>Здоровье</span></a></li>
 					<li><a href="#" class="js-click"><span>Другие</span><i class="down_ico"></i></a></li>
 				</ul>
-			</nav>
-			<div class="category js-category">
-				<p class="category__name">Категории</p>
-				<div class="category__in">
-					<ul class="category__list">
-						<li><a href="#">Мир</a></li>
-						<li><a href="#">Страна</a></li>
-						<li><a href="#">Жизнь</a></li>
-						<li><a href="#">Общество</a></li>
-						<li><a href="#">Мир</a></li>
-						<li><a href="#">Страна</a></li>
-						<li><a href="#">Жизнь</a></li>
-						<li><a href="#">Общество</a></li>
-						<li><a href="#">Смайл</a></li>
-						<li><a href="#">Видео</a></li>
-						<li><a href="#">Деньги</a></li>
-						<li><a href="#">Музыка</a></li>
-					</ul>
+				<div class="category js-category">
+					<p class="category__name">Категории</p>
+					<div class="category__in">
+						<ul class="category__list">
+							<li><a href="#">Мир</a></li>
+							<li><a href="#">Страна</a></li>
+							<li><a href="#">Жизнь</a></li>
+							<li><a href="#">Общество</a></li>
+							<li><a href="#">Мир</a></li>
+							<li><a href="#">Страна</a></li>
+							<li><a href="#">Жизнь</a></li>
+							<li><a href="#">Общество</a></li>
+							<li><a href="#">Смайл</a></li>
+							<li><a href="#">Видео</a></li>
+							<li><a href="#">Деньги</a></li>
+							<li><a href="#">Музыка</a></li>
+						</ul>
+					</div>
 				</div>
-			</div>
+			</nav>
 			<button class="btn-menu js-btn">
 				<span></span>
 			</button>
@@ -125,21 +125,23 @@
 					<span><i class="view_ico"></i>Просмотров 1724</span>
 					<span><i class="link_ico"></i>Источник: <a href="#">medium.com</a></span>
 				</div>
-				<div class="article__bl">
-					<div class="slidr js-slidr">
-						<a class="js-fancy" href="img/drone.jpg" id="drone"><img src="img/drone.jpg" alt=""></a>
-						<a class="js-fancy" href="img/drone-1.jpg" id="drone-1"><img src="img/drone-1.jpg" alt=""></a>
-						<a class="js-fancy" href="img/drone-2.jpg" id="drone"><img src="img/drone-2.jpg" alt=""></a>
-						<a class="js-fancy" href="img/drone-3.jpg" id="drone"><img src="img/drone-3.jpg" alt=""></a>
-					</div>
+				<div class="article__bl is-overflow">
 					<div class="side-slider js-vertical">
+						<!-- <div class="side-slider__img"><img src="img/map.jpg" alt=""></div> -->
 						<div class="side-slider__img"><img src="img/drone.jpg" alt=""></div>
 						<div class="side-slider__img"><img src="img/drone-1.jpg" alt=""></div>
 						<div class="side-slider__img"><img src="img/drone-2.jpg" alt=""></div>
 						<div class="side-slider__img"><img src="img/drone-3.jpg" alt=""></div>
 					</div>
+					<div class="slidr js-slidr">
+						<!-- <a class="js-fancy" href="img/map.jpg" id="drone"><img src="img/map.jpg" alt=""></a> -->
+						<a class="js-fancy" href="img/drone.jpg" id="drone"><img src="img/drone.jpg" alt=""></a>
+						<a class="js-fancy" href="img/drone-1.jpg" id="drone-1"><img src="img/drone-1.jpg" alt=""></a>
+						<a class="js-fancy" href="img/drone-2.jpg" id="drone"><img src="img/drone-2.jpg" alt=""></a>
+						<a class="js-fancy" href="img/drone-3.jpg" id="drone"><img src="img/drone-3.jpg" alt=""></a>
+					</div>
 				</div>
-				<div class="article__bl">
+				<div class="article__bl txt-font">
 					<p class="article__describe">БПЛА стал помощником виноделов французского региона Бордо. Здесь летающий робот, оснащенный камерой с высоким разрешением, контролирует ситуацию на землях и передает виноделам информацию о том, в каком состоянии лоза.</p>
 					<p>Дроны уже активно применяются для <a href="#">съемки с высоты</a>, также их перспективу рассмотрели в оборонной промышленности. Однако области применения коптеров постоянно расширяются. <a href="#">Robohunter</a> рассказывает о 15 сферах деятельности, где могут прижиться эти роботизированные установки. Судя по количеству и разнообразию профессий, на смену которым могут прийти БПЛА, можно сказать, что эра дронов наступила!</p>
 				</div>
@@ -167,7 +169,7 @@
 				<a href="#" class="footer__info js-info"><span>i</span></a>
 			</div>
 			<div class="footer__el is-right">
-				<a href="#" class="footer__link"><span>Скопировать ссылку</span></a>
+				<a href="#" class="footer__link js-copy"><span>Скопировать ссылку</span></a>
 			</div>
 			<div class="social">
 				<a href="#" class="social__link"><img src="img/fb-like.jpg" alt=""></a>
@@ -189,6 +191,12 @@
 			<li><a href="#"><i class="ad_ico"></i>Реклама</a></li>
 			<li><a href="#"><i class="privacy_ico"></i>Политика конфиденциальности</a></li>
 		</ul>
+	</div>
+</div>
+<div class="popup-wrap js-link">
+	<button type="button" class="close_ico js-close"></button>
+	<div class="popup">
+		<p><i class="popup_link_ico"></i><span>Ссылка скопирована</span></p>
 	</div>
 </div>
 <!-- load scripts -->

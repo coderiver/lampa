@@ -1,47 +1,47 @@
 $(document).ready(function() {
-	
-// });
-// head.ready(function() {
 
-	// $(window).resize(function() {
-	// 	if($(window).width() < 769) {
-	// 		$('.js-category').removeClass('is-active');
-	// 	}
-	// });
-
-	//category block
+	// category block
 	$('.js-click').click(function(e) {
 		e.preventDefault();
 		$('.js-category').toggleClass('is-active');
 	});
 
-	//scroll
+	// scroll
 	$('.js-scroll').mCustomScrollbar({
-		scrollInertia: 300
+		scrollInertia: 300,
+		advanced:{
+			updateOnSelectorChange: true
+		},
+		callbacks:{
+			onUpdate:function(){
+				console.log("Scrollbars updated");
+			}
+		}
 	});
 
-	//slider
+	// slider
 	$('.js-slidr').slick({
 		fade: true,
 		asNavFor: '.js-vertical'
 	});
 
-	//vertical
+	// vertical
 	$('.js-vertical').slick({
 		vertical: true,
+		slidesToScroll: 1,
 		slidesToShow: 3,
-		verticalSwiping: true,
 		arrows: false,
 		asNavFor: '.js-slidr',
-		focusOnSelect: true
+		focusOnSelect: true,
+		swipe: false
 	});
 
-	//fancybox
+	// fancybox
 	$('.js-fancy').fancybox({
 		openEffect: 'fade'
 	});
 
-	//toggle view from one to two cols
+	// toggle view from one to two cols
 	$('.js-view').click(function (e) {
 
 		e.preventDefault();
@@ -52,34 +52,48 @@ $(document).ready(function() {
 			$('.js-main').addClass('is-two-col');
 		} else{
 			$('.js-main').removeClass('is-two-col');
+
+			// fire slick reinit on view change
+			// $('.js-vertical').slick('reinit');
 		}
+
+		// fire slick reinit on view change
+		// $('.js-slidr').slick('reinit');
+
 	});
 
-	//popup
-	$('.js-info').click(function(){
+	// popups
+	$('.js-info').click(function(e){
+		e.preventDefault();
 		$('.js-popup').addClass('is-active');
+		$('.js-link').removeClass('is-active');
 	});
 
-	$('.js-close').click(function () {
+	$('.js-copy').click(function(e){
+		e.preventDefault();
+		$('.js-link').addClass('is-active');
 		$('.js-popup').removeClass('is-active');
 	});
 
-	//vertical slider height
+	$('.js-close').click(function () {
+		$(this).parent().removeClass('is-active');
+	});
+
+	// vertical slider height
 	function verticalHeight(){
 
 		var v = $('.js-vertical');
-		var slide = v.find('.slick-active');
+		var mainSliderHeight = $('.slidr').outerHeight();
 
-		var vh = slide.outerHeight() * slide.length - 20;
-		v.css({'height': vh});
+		v.css({height: mainSliderHeight});
 
 		$(window).resize(function(){
-			var vh = slide.outerHeight() * slide.length - 20;
-			v.css({'height': vh});
+			var mainSliderHeight = $('.slidr').outerHeight();
+			v.css({height: mainSliderHeight});
 		});
+
 	}
 
 	verticalHeight();
-
 
 });
