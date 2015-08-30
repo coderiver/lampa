@@ -33,7 +33,7 @@ $(document).ready(function() {
 		arrows: false,
 		asNavFor: '.js-slidr',
 		focusOnSelect: true,
-		swipe: false
+		verticalSwiping: true
 	});
 
 	// fancybox
