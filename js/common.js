@@ -1,4 +1,5 @@
 $(document).ready(function() {
+	var slidr = $('.js-slidr');
 
 	// category block
 	$('.js-click').click(function(e) {
@@ -9,18 +10,18 @@ $(document).ready(function() {
 	// scroll
 	$('.js-scroll').mCustomScrollbar({
 		scrollInertia: 300,
-		advanced:{
+		advanced: {
 			updateOnSelectorChange: true
-		},
-		callbacks:{
-			onUpdate:function(){
-				console.log("Scrollbars updated");
-			}
 		}
 	});
 
+	// fancybox
+	$('.js-fancy').fancybox({
+		openEffect: 'fade'
+	});
+
 	// slider
-	$('.js-slidr').slick({
+	slidr.slick({
 		fade: true,
 		asNavFor: '.js-vertical'
 	});
@@ -36,38 +37,65 @@ $(document).ready(function() {
 		verticalSwiping: true
 	});
 
-	// fancybox
-	$('.js-fancy').fancybox({
-		openEffect: 'fade'
-	});
+	function slickReinit() {
+		slidr.slick('unslick');
+		slidr.slick({
+			fade: true,
+			asNavFor: '.js-vertical'
+		});
+	}
 
 	// toggle view from one to two cols
-	$('.js-view').click(function (e) {
-
+	$('.js-view').click(function(e) {
 		e.preventDefault();
 		$('.js-view').removeClass('is-active');
 		$(this).addClass('is-active');
 
-		if($(this).hasClass('two-col')){
+		if ($(this).hasClass('two-col')) {
 			$('.js-main').addClass('is-two-col');
-		} else{
+		} else {
 			$('.js-main').removeClass('is-two-col');
 		}
 
+		if ($(this).hasClass('two-col') && $(window).height() < 769) {
+			$('.js-article-outside').addClass('is-hidden');
+			$('.js-article-inside').addClass('is-visible');
+			slidr.addClass('is-small');
+			slickReinit();
+		} else {
+			$('.js-article-outside').removeClass('is-hidden');
+			$('.js-article-inside').removeClass('is-visible');
+			slidr.removeClass('is-small');
+			slickReinit();
+		}
+	});
+
+	// small slider when two columns on resize
+	$(window).resize(function() {
+		if ($(window).height() < 769 && $('.js-view.two-col').hasClass('is-active')) {
+			slidr.addClass('is-small');
+			$('.js-article-outside').addClass('is-hidden');
+			$('.js-article-inside').addClass('is-visible');
+			slickReinit();
+		} else {
+			slidr.removeClass('is-small');
+			$('.js-article-outside').removeClass('is-hidden');
+			$('.js-article-inside').removeClass('is-visible');
+		}
 	});
 
 	// popups
-	$('.js-info').click(function(e){
+	$('.js-info').click(function(e) {
 		e.preventDefault();
 		$('.js-popup').addClass('is-active');
 	});
 
-	$('.js-copy').click(function(e){
+	$('.js-copy').click(function(e) {
 		e.preventDefault();
 		$('.js-link').addClass('is-active');
 	});
 
-	$('.js-close').click(function () {
+	$('.js-close').click(function() {
 		$(this).parent().removeClass('is-active');
 	});
 
@@ -87,5 +115,5 @@ $(document).ready(function() {
 	// }
 
 	// verticalHeight();
-
 });
+

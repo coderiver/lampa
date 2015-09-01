@@ -173,6 +173,9 @@
 				text-decoration: underline
 			&:before
 				display: none
+			&.is-active
+				&:before
+					display: none
 	+r(1000)
 		&:before,
 		&:after
@@ -237,9 +240,10 @@
 			visibility: hidden
 			max-height: 385px
 		.slidr
-			float: none
-			width: 100%
+			//width: 100%
 			max-width: inherit
+			&.is-small
+				width: auto
 	&__in
 		height: 100%
 		padding: 20px
@@ -276,17 +280,40 @@
 		.clock_ico,
 		.view_ico
 			margin-top: -2px
+		&.is-inside
+			position: absolute
+			float: right
+			width: 157px
+			margin-left: 20px
+			opacity: 0
+			visibility: hidden
+			p
+				+clr
+			span
+				display: block
+				margin-right: 0
+				overflow: hidden
+			i
+				float: left
+				margin: 4px 24px 0 0
+				&.clock_ico,
+				&.view_ico
+					margin-right: 20px
+		&.is-hidden
+			position: absolute
+			opacity: 0
+			visibility: hidden
+		&.is-visible
+			position: static
+			opacity: 1
+			visibility: visible
 	&__bl
 		margin-top: 20px
 		+clr
 		&.txt-font
-			font-family: Georgia, serif
-			p:first-child, div:first-child
-				padding-bottom: 13px
-				font-size: 14px
-				color: #525252
-				line-height: 22px
-				+sf
+			font-size: 14px
+			color: #525252
+			line-height: 22px
 		&.is-overflow
 			max-height: 385px
 			overflow: hidden
@@ -295,6 +322,9 @@
 			padding: 0
 	+r(1000)
 		padding-bottom: 85px
+	+r(768)
+		&__bl
+			margin-top: 15px
 
 .slidr
 	max-height: 385px
@@ -302,8 +332,14 @@
 	+box
 	&:first-child
 		display: block
+	&.is-small
+		height: 280px
+		.slick-slide
+			div
+				height: 280px
 	.slick-slide
 		div
+			width: 100%
 			height: 385px
 			+cover
 	.slick-next
@@ -392,7 +428,6 @@
 
 //footer
 .footer
-	position: absolute
 	left: 0
 	right: 0
 	bottom: 0
