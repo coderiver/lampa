@@ -21,6 +21,7 @@
 		border: 1px solid #d8d8d8
 		border-radius: 2px
 		&:before
+			display: none
 			content: ""
 			position: absolute
 			top: 0
@@ -30,8 +31,9 @@
 			background: #d8d8d8
 		&:first-child
 			margin-right: 5px
+		&.two-col
 			&:before
-				display: none
+				display: block
 		&.is-active
 			border-color: #000
 			&:before
@@ -240,7 +242,6 @@
 			visibility: hidden
 			max-height: 385px
 		.slidr
-			//width: 100%
 			max-width: inherit
 			&.is-small
 				width: auto
@@ -314,12 +315,13 @@
 			font-size: 14px
 			color: #525252
 			line-height: 22px
-		&.is-overflow
-			max-height: 385px
-			overflow: hidden
 		.embed-container
 			height: 385px
 			padding: 0
+	&__img
+		overflow: hidden
+		img
+			width: 100%
 	+r(1000)
 		padding-bottom: 85px
 	+r(768)
@@ -362,13 +364,14 @@
 .side-slider
 	float: right
 	width: 220px
-	margin-top: -10px
+	height: 385px
 	padding-left: 20px
+	overflow: hidden
 	+box
 	.slick-slide
 		border: none !important
 	&__img
-		padding: 10px 0
+		padding-bottom: 20px
 		cursor: pointer
 		+box
 		div

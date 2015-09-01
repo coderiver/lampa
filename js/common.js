@@ -84,6 +84,16 @@ $(document).ready(function() {
 		}
 	});
 
+	if ($(window).height() < 769 && $('.js-view.two-col').hasClass('is-active')) {
+		slidr.addClass('is-small');
+		$('.js-article-outside').addClass('is-hidden');
+		$('.js-article-inside').addClass('is-visible');
+	} else {
+		slidr.removeClass('is-small');
+		$('.js-article-outside').removeClass('is-hidden');
+		$('.js-article-inside').removeClass('is-visible');
+	}
+
 	// popups
 	$('.js-info').click(function(e) {
 		e.preventDefault();
