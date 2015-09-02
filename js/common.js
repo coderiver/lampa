@@ -1,6 +1,4 @@
 $(document).ready(function() {
-	var slidr = $('.js-slidr');
-
 	// category block
 	$('.js-click').click(function(e) {
 		e.preventDefault();
@@ -21,7 +19,7 @@ $(document).ready(function() {
 	});
 
 	// slider
-	slidr.slick({
+	$('.js-slidr').slick({
 		fade: true,
 		asNavFor: '.js-vertical'
 	});
@@ -38,8 +36,8 @@ $(document).ready(function() {
 	});
 
 	function slickReinit() {
-		slidr.slick('unslick');
-		slidr.slick({
+		$('.js-slidr').slick('unslick');
+		$('.js-slidr').slick({
 			fade: true,
 			asNavFor: '.js-vertical'
 		});
@@ -60,12 +58,12 @@ $(document).ready(function() {
 		if ($(this).hasClass('two-col') && $(window).height() < 769) {
 			$('.js-article-outside').addClass('is-hidden');
 			$('.js-article-inside').addClass('is-visible');
-			slidr.addClass('is-small');
+			$('.js-slidr').addClass('is-small');
 			slickReinit();
 		} else {
 			$('.js-article-outside').removeClass('is-hidden');
 			$('.js-article-inside').removeClass('is-visible');
-			slidr.removeClass('is-small');
+			$('.js-slidr').removeClass('is-small');
 			slickReinit();
 		}
 	});
@@ -73,23 +71,23 @@ $(document).ready(function() {
 	// small slider when two columns on resize
 	$(window).resize(function() {
 		if ($(window).height() < 769 && $('.js-view.two-col').hasClass('is-active')) {
-			slidr.addClass('is-small');
+			$('.js-slidr').addClass('is-small');
 			$('.js-article-outside').addClass('is-hidden');
 			$('.js-article-inside').addClass('is-visible');
 			slickReinit();
 		} else {
-			slidr.removeClass('is-small');
+			$('.js-slidr').removeClass('is-small');
 			$('.js-article-outside').removeClass('is-hidden');
 			$('.js-article-inside').removeClass('is-visible');
 		}
 	});
 
 	if ($(window).height() < 769 && $('.js-view.two-col').hasClass('is-active')) {
-		slidr.addClass('is-small');
+		$('.js-slidr').addClass('is-small');
 		$('.js-article-outside').addClass('is-hidden');
 		$('.js-article-inside').addClass('is-visible');
 	} else {
-		slidr.removeClass('is-small');
+		$('.js-slidr').removeClass('is-small');
 		$('.js-article-outside').removeClass('is-hidden');
 		$('.js-article-inside').removeClass('is-visible');
 	}
@@ -109,21 +107,5 @@ $(document).ready(function() {
 		$(this).parent().removeClass('is-active');
 	});
 
-	// vertical slider height
-	// function verticalHeight(){
-
-	// 	var v = $('.js-vertical');
-	// 	var mainSliderHeight = $('.slidr').outerHeight();
-
-	// 	v.css({height: mainSliderHeight});
-
-	// 	$(window).resize(function(){
-	// 		var mainSliderHeight = $('.slidr').outerHeight();
-	// 		v.css({height: mainSliderHeight});
-	// 	});
-
-	// }
-
-	// verticalHeight();
 });
 
