@@ -516,10 +516,59 @@
 	display: inline-block
 	margin-top: 5px
 	&__link
+		position: relative
 		display: inline-block
+		text-align: left
+		width: 104px
+		height: 22px
 		margin: 0 5px
-		max-width: 104px
+		padding: 5px 0
+		font-size: 12px
+		color: #FFF
+		background-color: #486caa
 		vertical-align: middle
-		img
-			max-width: 100%
-
+		border-radius: 2px
+		line-height: 1.2
+		+box
+		+clr
+		+transition(background-color 0.25s)
+		&:hover
+			background-color: darken(#486caa, 10%)
+		&.is-vk
+			background-color: #41689b
+			&:hover
+				background-color: darken(#41689b, 10%)
+		&.is-tw
+			background-color: #00baf3
+			&:hover
+				background-color: darken(#00baf3, 10%)
+		&.is-g
+			background-color: #e76140
+			&:hover
+				background-color: darken(#e76140, 10%)
+		i
+			position: absolute
+			top: 50%
+			left: 7px
+	&__tag
+		display: inline-block
+		padding-left: 30px
+	&__counter
+		float: right
+		max-width: 40px
+		margin-right: 7px
+		overflow: hidden
+		text-overflow: ellipsis
+		white-space: nowrap
+	.fb_ico
+		margin-top: -8px
+		+s(fb)
+	.vk_ico
+		margin-top: -5px
+		+s(vk)
+	.tw_ico
+		margin-top: -7px
+		+s(tw)
+	.g_ico
+		margin-top: -8px
+		+s(g)
