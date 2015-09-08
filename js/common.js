@@ -71,7 +71,7 @@ head.ready(function() {
 		variableWidth: true,
 		arrows: false,
 		swipe: false,
-		infinite: false,
+		infinite: true,
 		centerPadding: '0'
 	});
 
@@ -82,7 +82,7 @@ head.ready(function() {
 		arrows: false,
 		asNavFor: '.js-navigation',
 		swipe: false,
-		infinite: false
+		infinite: true
 	});
 
 	// vertical
