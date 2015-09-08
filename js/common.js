@@ -71,7 +71,7 @@ head.ready(function() {
 		variableWidth: true,
 		arrows: false,
 		swipe: false,
-		infinite: true,
+		infinite: false,
 		centerPadding: '0'
 	});
 
@@ -82,7 +82,7 @@ head.ready(function() {
 		arrows: false,
 		asNavFor: '.js-navigation',
 		swipe: false,
-		infinite: true
+		infinite: false
 	});
 
 	// vertical
@@ -101,8 +101,7 @@ head.ready(function() {
 	$('.js-gallery').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
-		infinite: true,
-		mobileFirst: true
+		infinite: true
 	});
 
 	// popup
