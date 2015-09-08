@@ -1,9 +1,13 @@
 head.ready(function() {
-	$.nonbounce();
+
 	// hammer used to get more control on swipe
 	var horz = document.getElementById('js-horz');
 	var nav = document.getElementById('js-nav');
 	var vert = document.getElementById('js-vert');
+
+	if (window.innerHeight > window.innerWidth) {
+	    $.nonbounce();
+	}
 
 	// 3 sliders
 	if ($('#js-horz').length > 0) {
@@ -63,11 +67,12 @@ head.ready(function() {
 		slidesToScroll: 1,
 		asNavFor: '.js-article',
 		centerMode: true,
-		infinite: true,
 		focusOnSelect: true,
 		variableWidth: true,
 		arrows: false,
-		swipe: false
+		swipe: false,
+		infinite: false,
+		centerPadding: '0'
 	});
 
 	// article
@@ -76,8 +81,8 @@ head.ready(function() {
 		slidesToScroll: 1,
 		arrows: false,
 		asNavFor: '.js-navigation',
-		infinite: true,
-		swipe: false
+		swipe: false,
+		infinite: false
 	});
 
 	// vertical
@@ -111,9 +116,25 @@ head.ready(function() {
 		$('body').addClass('is-overflow');
 	});
 
+	$('.js-share-link').click(function(e) {
+		e.preventDefault();
+		$('.js-share-link-popup').addClass('is-active');
+		$('body').addClass('is-overflow');
+	});
+
+	$('.js-link').click(function(e) {
+		e.preventDefault();
+		$(this).text('Скопировать ссылку');
+		$(this).parent().addClass('-z-index');
+		$('.js-img-popup').addClass('is-active');
+		$('body').addClass('is-overflow');
+	});
+
+
 	$('.js-close').click(function() {
-		$('.js-popup').removeClass('is-active');
-		$('.js-more-popup').removeClass('is-active');
+		$(this).parent().removeClass('is-active');
+		$('.js-link').text('Поделиться');
+		$('.js-link').parent().removeClass('-z-index');
 		$('body').removeClass('is-overflow');
 	});
 });
