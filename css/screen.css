@@ -134,10 +134,11 @@ input[type="search"]::-webkit-search-cancel-button { display: none; }
 .article__in { padding: 0 10px; }
 .article__ttl { height: 10vh; padding: 12px 0 7px; font-size: 1.7rem; color: #000; line-height: 1.2; }
 @media only screen and (orientation: landscape) { .article__ttl { height: auto; } }
-.article__img { position: relative; display: block; height: 38vh; height: 31vh; margin: 0 -9px; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.article__img { position: relative; display: block; height: 38vh; height: 31vh; margin: 0 -9px; }
+.article__img img { width: 100%; height: 100%; }
 .article__img.-z-index { z-index: 11; }
 .article__gallery { position: relative; margin: 0 -9px; }
-.article__gallery-slide div { height: 44vmax; height: 18vmax; height: 31vmax; background-repeat: no-repeat; background-size: cover; background-position: 50% 50%; }
+.article__gallery-slide img { width: 100%; height: 44vmax; height: 18vmax; height: 31vmax; }
 .article__gallery .slick-prev, .article__gallery .slick-next { top: initial; bottom: 12px; margin-top: 0; z-index: 2; }
 .article__gallery .slick-prev { left: 10px; }
 .article__gallery .slick-next { right: 10px; }

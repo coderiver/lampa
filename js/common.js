@@ -110,7 +110,8 @@ head.ready(function() {
 		$('body').addClass('is-overflow');
 	});
 
-	$('.js-more').click(function() {
+	$('.js-more').click(function(e) {
+		e.preventDefault();
 		$('.js-more-popup').addClass('is-active');
 		$('body').addClass('is-overflow');
 	});
