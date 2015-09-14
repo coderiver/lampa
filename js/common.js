@@ -4,41 +4,59 @@ head.ready(function() {
 	var horz = document.getElementById('js-horz');
 	var nav = document.getElementById('js-nav');
 	var vert = document.getElementById('js-vert');
+	var vert2 = document.getElementById('js-vert-2');
 
 	if (window.innerHeight > window.innerWidth) {
 	    $.nonbounce();
 	}
 
-	// 3 sliders
+	function someIdHorz(name, id) {
+		Hammer(name).on('swipeleft', function() {
+			$(id).slick('slickNext');
+		});
+		Hammer(name).on('swiperight', function() {
+			$(id).slick('slickPrev');
+		});
+	}
+
+	function someIdVert(name, id) {
+		Hammer(name).on('swipeup', function() {
+			$(id).slick('slickNext');
+		});
+		Hammer(name).on('swipedown', function() {
+			$(id).slick('slickPrev');
+		});
+		$(id).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+			// var mid = $("div.js-article div.slick-active div.article__bl[data-slick-index="+nextSlide+"]").find("div.article__img").attr("data-id");
+			// getMaterialData(mid, nextSlide);
+			console.log(name);
+		});
+	}
+
+	// sliders
 	if ($('#js-horz').length > 0) {
-		Hammer(horz).on('swipeleft', function() {
-			$('.js-article').slick('slickNext');
-		});
-		Hammer(horz).on('swiperight', function() {
-			$('.js-article').slick('slickPrev');
-		});
+		someIdHorz(horz, '#js-horz');
 	}
 	if ($('#js-nav').length > 0) {
-		Hammer(nav).on('swipeleft', function() {
-			$('.js-navigation').slick('slickNext');
-		});
-		Hammer(nav).on('swiperight', function() {
-			$('.js-navigation').slick('slickPrev');
-		});
+		someIdHorz(nav, '#js-nav');
 	}
-	if ($('#js-vert').length > 0){
+	if ($('#js-vert').length > 0) {
 		var mc = new Hammer(vert);
 		mc.get('swipe').set({
 			direction: Hammer.DIRECTION_ALL,
 			threshold: 5,
 			velocity: 0.1
 		});
-		Hammer(vert).on('swipeup', function() {
-			$('.js-slick-vertical').slick('slickNext');
+		someIdVert(vert, '#js-vert');
+	}
+	if ($('#js-vert-2').length > 0) {
+		var mc = new Hammer(vert2);
+		mc.get('swipe').set({
+			direction: Hammer.DIRECTION_ALL,
+			threshold: 5,
+			velocity: 0.1
 		});
-		Hammer(vert).on('swipedown', function() {
-			$('.js-slick-vertical').slick('slickPrev');
-		});
+		someIdVert(vert2, '#js-vert-2');
 	}
 
 	// sidemenu
@@ -137,6 +155,7 @@ head.ready(function() {
 		$('.js-link').parent().removeClass('-z-index');
 		$('body').removeClass('is-overflow');
 	});
+
 });
 
 
