@@ -27,9 +27,8 @@ head.ready(function() {
 			$(id).slick('slickPrev');
 		});
 		$(id).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-			// var mid = $("div.js-article div.slick-active div.article__bl[data-slick-index="+nextSlide+"]").find("div.article__img").attr("data-id");
-			// getMaterialData(mid, nextSlide);
-			console.log(name);
+			var next = $(id).find('.article__bl').eq(nextSlide).children('.article__img').data();
+			console.log(id, next);
 		});
 	}
 

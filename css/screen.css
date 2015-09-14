@@ -108,7 +108,7 @@ input[type="search"]::-webkit-search-cancel-button { display: none; }
 
 .sidemenu { position: fixed; width: 85%; top: 0; bottom: 0; background: #FFF; border-right: 1px solid #b0b0b0; z-index: 11; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; -moz-transform: translate3d(-100%, 0, 0); -ms-transform: translate3d(-100%, 0, 0); -webkit-transform: translate3d(-100%, 0, 0); transform: translate3d(-100%, 0, 0); -moz-transition: -moz-transform 0.3s ease; -o-transition: -o-transform 0.3s ease; -webkit-transition: -webkit-transform 0.3s ease; transition: transform 0.3s ease; }
 .sidemenu.is-visible { -moz-transform: translate3d(0, 0, 0); -ms-transform: translate3d(0, 0, 0); -webkit-transform: translate3d(0, 0, 0); transform: translate3d(0, 0, 0); }
-.sidemenu__in { height: 100%; overflow-y: auto; -webkit-overflow-scroll: touch; }
+.sidemenu__in { height: 100%; overflow-y: auto; -webkit-overflow-scrolling: touch; }
 .sidemenu__list li:last-child a { border: none; }
 .sidemenu__list a { display: block; padding: 8px 15px 5px; font-size: 1.4rem; color: #525252; border-bottom: 1px solid #b0b0b0; }
 .sidemenu__list a:hover p { text-decoration: underline; }
