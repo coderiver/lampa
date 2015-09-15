@@ -1,63 +1,5 @@
 head.ready(function() {
 
-	// hammer used to get more control on swipe
-	var horz = document.getElementById('js-horz');
-	var nav = document.getElementById('js-nav');
-	var vert = document.getElementById('js-vert');
-	var vert2 = document.getElementById('js-vert-2');
-
-	if (window.innerHeight > window.innerWidth) {
-	    $.nonbounce();
-	}
-
-	function someIdHorz(name, id) {
-		Hammer(name).on('swipeleft', function() {
-			$(id).slick('slickNext');
-		});
-		Hammer(name).on('swiperight', function() {
-			$(id).slick('slickPrev');
-		});
-	}
-
-	function someIdVert(name, id) {
-		Hammer(name).on('swipeup', function() {
-			$(id).slick('slickNext');
-		});
-		Hammer(name).on('swipedown', function() {
-			$(id).slick('slickPrev');
-		});
-		$(id).on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-			var next = $(id).find('.article__bl').eq(nextSlide).children('.article__img').data();
-			console.log(id, next);
-		});
-	}
-
-	// sliders
-	if ($('#js-horz').length > 0) {
-		someIdHorz(horz, '#js-horz');
-	}
-	if ($('#js-nav').length > 0) {
-		someIdHorz(nav, '#js-nav');
-	}
-	if ($('#js-vert').length > 0) {
-		var mc = new Hammer(vert);
-		mc.get('swipe').set({
-			direction: Hammer.DIRECTION_ALL,
-			threshold: 5,
-			velocity: 0.1
-		});
-		someIdVert(vert, '#js-vert');
-	}
-	if ($('#js-vert-2').length > 0) {
-		var mc = new Hammer(vert2);
-		mc.get('swipe').set({
-			direction: Hammer.DIRECTION_ALL,
-			threshold: 5,
-			velocity: 0.1
-		});
-		someIdVert(vert2, '#js-vert-2');
-	}
-
 	// sidemenu
 	$('.js-btn').click(function() {
 		$('body').addClass('is-overflow');
@@ -73,11 +15,6 @@ head.ready(function() {
 		$('.js-sidemenu').removeClass('is-visible');
 	});
 
-	// scroll
-	$('.js-scroll').mCustomScrollbar({
-		scrollInertia: 300
-	});
-
 	// category navigation
 	$('.js-navigation').slick({
 		slidesToShow: 3,
@@ -87,7 +24,6 @@ head.ready(function() {
 		focusOnSelect: true,
 		variableWidth: true,
 		arrows: false,
-		swipe: false,
 		infinite: false,
 		centerPadding: '0'
 	});
@@ -98,21 +34,19 @@ head.ready(function() {
 		slidesToScroll: 1,
 		arrows: false,
 		asNavFor: '.js-navigation',
-		swipe: false,
 		infinite: false
 	});
 
 	// vertical
-	$('.js-slick-vertical').slick({
-		slidesToShow: 1,
-		slidesToScroll: 1,
-		arrows: false,
-		infinite: false,
-		mobileFirst: true,
-		vertical: true,
-		verticalSwiping: true,
-		swipe: false
-	});
+	// $('.js-slick-vertical').slick({
+	// 	slidesToShow: 1,
+	// 	slidesToScroll: 1,
+	// 	arrows: false,
+	// 	infinite: false,
+	// 	mobileFirst: true,
+	// 	vertical: true,
+	// 	verticalSwiping: true
+	// });
 
 	// gallery page
 	$('.js-gallery').slick({
@@ -155,6 +89,16 @@ head.ready(function() {
 		$('body').removeClass('is-overflow');
 	});
 
+	var swiperHeight = $('body').outerHeight() - $('.header').outerHeight();
+	$('.swiper-slide').outerHeight(swiperHeight);
+
+	var mySwiper = new Swiper ('.swiper-container', {
+		speed: 500,
+		direction: 'vertical',
+		height: swiperHeight
+	});
 });
+
+
 
 

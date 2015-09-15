@@ -2,9 +2,44 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>Mobile</title>
+	<title>Jquery Mobile</title>
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
 	<link rel="stylesheet" media="all" href="css/screen.css" >
+	<link rel="stylesheet" media="all" href="css/jquery.mobile-1.4.5.min.css" >
+<style>
+	/* Set the background image sources */
+	#newyork { background-image: url("../_assets/img/newyork.jpg"); }
+	#buenosaires { background-image: url("../_assets/img/buenosaires.jpg"); }
+	#paris { background-image: url("../_assets/img/paris.jpg"); }
+	#capetown { background-image: url("../_assets/img/capetown.jpg"); }
+	#seoul { background-image: url("../_assets/img/seoul.jpg"); }
+	#sydney { background-image: url("../_assets/img/sydney.jpg"); }
+	/* Background settings */
+	.demo-page {
+	    background-size: cover;
+	    background-position: center center;
+	    background-repeat: no-repeat;
+	}
+	/* Transparent footer */
+	.demo-page .ui-footer {
+	    background: none;
+	    border: none;
+	    bottom: 0;
+	}
+	/* The footer won't have a height because there are only two absolute positioned elements in it.
+	So we position the buttons from the bottom. */
+	.control.ui-btn-left,
+	.trivia-btn.ui-btn-right {
+	    top: auto;
+	    bottom: 7px;
+	    margin: 0;
+	}
+	/* Custom styling for the trivia source */
+	small {
+	    font-size: .75em;
+	    color: #666;
+	}
+</style>
 </head>
 <body class="is-gray nonbounce">
 <!-- BEGIN  out-->
@@ -30,7 +65,28 @@
 	<!-- begin article -->
 	<div class="article">
 		<div class="article__pad">
-			<div id="js-horz" class="js-article">
+			<div data-role="page" id="city" class="demo-page" data-dom-cache="true" data-theme="b" data-prev="prevCity" data-next="nextCity" data-url="city">
+			    <div role="main" class="ui-content">
+			        <div id="trivia-city" class="trivia ui-content" data-role="popup" data-position-to="window" data-tolerance="50,30,30,30" data-theme="a">
+			            <a href="#" data-rel="back" class="ui-btn ui-btn-right ui-btn-b ui-btn-icon-notext ui-icon-delete ui-corner-all">Close</a>
+			           	<div class="article__bl">
+							<div class="article__in">
+								<h2 class="article__ttl">1111Ниагарский водопад, вид сверху. Одно из самых впечатляющих зрелищ планеты!</h2>
+							</div>
+							<div class="article__img" data-attr="225">
+								<img src="img/niagara.jpg" alt="">
+								<a class="article__link" href="#">В галерею</a>
+							</div>
+							<div class="article__in">
+								<div class="article__txt">
+									<p><a href="#">Ниагарский водопад</a> находится на границе между Соединенными Штатами и Канадой и состоит из трех отдельных водопадов — Американского, водопада Фаты и водопада Подковы, который часто называют Канадским из-за того, что он находится на территории Канады.</p>
+								</div>
+							</div>
+						</div>
+			        </div><!-- /popup -->
+			    </div><!-- /content -->
+			</div>
+			<!-- <div id="js-horz" class="js-article">
 				<div class="slide">
 					<div id="js-vert" class="js-slick-vertical">
 						<div class="article__bl">
@@ -171,7 +227,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			</div> -->
 		</div>
 	</div>
 	<!-- end article -->
