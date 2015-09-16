@@ -28,7 +28,6 @@ head.ready(function() {
 		centerPadding: '0'
 	});
 
-	// article
 	$('.js-article').slick({
 		slidesToShow: 1,
 		slidesToScroll: 1,
@@ -37,16 +36,24 @@ head.ready(function() {
 		infinite: false
 	});
 
-	// vertical
-	// $('.js-slick-vertical').slick({
-	// 	slidesToShow: 1,
-	// 	slidesToScroll: 1,
-	// 	arrows: false,
-	// 	infinite: false,
-	// 	mobileFirst: true,
-	// 	vertical: true,
-	// 	verticalSwiping: true
-	// });
+	$('.js-article').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+		var next = $(this).find('.slick-slide').eq(nextSlide).find('.article__bl').first().children('.article__img').data();
+		console.log(nextSlide, next);
+	});
+
+	// news nav
+	var swiperHeight = $('body').outerHeight() - $('.header').outerHeight();
+	$('.swiper-slide').outerHeight(swiperHeight);
+
+	var mySwiper = new Swiper ('.swiper-container', {
+		speed: 500,
+		direction: 'vertical',
+		height: swiperHeight,
+		onSlideChangeStart: function(swiper) {
+			var nextSlide = $(swiper.slides[swiper.activeIndex]).find('.article__img').data();
+			console.log(nextSlide);
+		}
+	});
 
 	// gallery page
 	$('.js-gallery').slick({
@@ -89,12 +96,15 @@ head.ready(function() {
 		$('body').removeClass('is-overflow');
 	});
 
-	var swiperHeight = $('body').outerHeight() - $('.header').outerHeight();
-	$('.swiper-slide').outerHeight(swiperHeight);
+	// preloader
+	var preloader = $('.js-preloader'),
+		spinner   = preloader.find('.spinner');
+	spinner.delay(2500).fadeOut();
+	preloader.delay(3000).fadeOut('fast');
+	$('body').css('overflow', 'hidden');
+	setTimeout(function() {
+		$('body').css('overflow', 'visible');
+	}, 3000);
 
-	var mySwiper = new Swiper ('.swiper-container', {
-		speed: 500,
-		direction: 'vertical',
-		height: swiperHeight
-	});
+
 });

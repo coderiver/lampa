@@ -242,9 +242,9 @@
 		color: #424242
 		line-height: 2rem
 		+box
-		// p
-		// 	height: 12rem
-		// 	overflow: hidden
+		p
+			height: 12rem
+			overflow: hidden
 	a
 		color: #62b7ff
 		text-decoration: underline
@@ -321,3 +321,18 @@
 	z-index: 10
 	&.is-visible
 		display: block
+
+//preloader
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: #FFF
+	z-index: 2
+	+vertical
+	&__spinner
+		position: relative
+		vertical-align: middle
+		z-index: 2
