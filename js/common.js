@@ -98,7 +98,3 @@ head.ready(function() {
 		height: swiperHeight
 	});
 });
-
-
-
-
