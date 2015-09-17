@@ -85,9 +85,10 @@ head.ready(function() {
 		e.preventDefault();
 		$(this).text('Скопировать ссылку');
 		$(this).parent().addClass('-z-index');
+		$(this).parent().clone().appendTo('.js-img-popup').find('.js-link').addClass('js-copy-btn');
+		$('.js-copy-txt').addClass('-is-absolute');
 		$('.js-img-popup').addClass('is-active');
 		$('body').addClass('is-fixed');
-		$('.article__img.-z-index').clone().appendTo('.js-img-popup');
 	});
 
 
@@ -105,4 +106,10 @@ head.ready(function() {
 	spinner.delay(2500).fadeOut();
 	preloader.delay(3000).fadeOut('fast');
 
+	// copy info
+	$(document).on('click', '.js-copy-btn', function(e) {
+		e.preventDefault();
+		$(this).parents('.popup-wrap').find('.js-copy-txt input').select();
+	});
 });
+

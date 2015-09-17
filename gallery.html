@@ -106,9 +106,12 @@
 <!-- begin popup-wrap  -->
 <div class="popup-wrap js-share-link-popup">
 	<button type="button" class="close_ico js-close"></button>
-	<div class="popup">
+	<div class="popup -is-fullwidth">
 		<div class="popup__txt">
-			<p><i class="icon-share-link"></i>Ссылка скопирована</p>
+			<p class="copy-text js-copy-txt">
+				<input type="text" value="http://lamp.today/show/503" readonly>
+			</p>
+			<button type="button" class="js-copy-btn copy-text-btn">Скопировать ссылку</button>
 		</div>
 	</div>
 </div>

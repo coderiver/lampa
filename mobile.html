@@ -44,7 +44,7 @@
    									</div>
    									<div class="article__img" data-attr="225">
    										<img src="img/niagara.jpg" alt="">
-   										<a class="article__link js-link" href="#">В галерею</a>
+   										<a class="article__link js-link" href='#'>В галерею</a>
    									</div>
    									<div class="article__in">
    										<div class="article__txt">
@@ -313,9 +313,7 @@
 <!-- begin sidemenu  -->
 <div class="sidemenu js-sidemenu">
 	<div class="sidemenu__in js-scroll" data-mcs-theme="minimal-dark">
-		<form>
-			<label class="search"><input type="search" placeholder="Поиск"><button type="button" class="icon-search"></button></label>
-		</form>
+		<div class="search"><input type="text" placeholder="Поиск"><button type="button" class="icon-search"></button></div>
 		<ul class="sidemenu__list">
 			<li>
 				<a href="#">
@@ -407,6 +405,9 @@
 <!-- end js-loader -->
 <!-- begin popup-wrap  -->
 <div class="popup-wrap js-img-popup">
+	<p class="copy-text js-copy-txt">
+		<input type="text" value="http://lamp.today/show/503" readonly>
+	</p>
 	<button type="button" class="close_ico js-close"></button>
 	<!-- begin social  -->
 	<div class="social">
