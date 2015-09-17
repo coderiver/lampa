@@ -208,8 +208,6 @@
 			height: 100%
 		> video
 			height: 100%
-		&.-z-index
-			z-index: 11
 	&__gallery
 		position: relative
 		margin: 0 -9px
@@ -249,17 +247,21 @@
 		color: #62b7ff
 		text-decoration: underline
 	.article__link
-		position: absolute
-		left: 0
-		right: 0
-		bottom: 0
-		padding: 15px 0
-		font-size: 1.2rem
-		text-transform: uppercase
-		text-align: center
 		text-decoration: none
-		background: rgba(0, 0, 0, 0.4)
 		color: #FFF
+
+.article__link
+	position: absolute
+	left: 0
+	right: 0
+	bottom: 0
+	padding: 15px 0
+	font-size: 1.2rem
+	text-transform: uppercase
+	text-align: center
+	text-decoration: none
+	background: rgba(0, 0, 0, 0.4)
+	color: #FFF
 
 //vertical
 .vertical
@@ -272,7 +274,7 @@
 	right: 0
 	bottom: 0
 	font-size: 0
-	height: 7vh
+	// height: 7vh
 	overflow: hidden
 	+lsc
 		position: static
@@ -290,7 +292,7 @@
 		&:last-child
 			padding-right: 0
 		&-in
-			padding: 0.3rem 1rem 0.2rem
+			padding: 0.4rem 1rem 0.4rem
 			&.-bg-fb
 				background: #486caa
 			&.-bg-tw
@@ -324,7 +326,7 @@
 
 //preloader
 .preloader
-	position: fixed
+	position: absolute
 	top: 0
 	left: 0
 	right: 0

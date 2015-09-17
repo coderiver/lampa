@@ -4,11 +4,12 @@
 	<meta charset="utf-8">
 	<title>Mobile</title>
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-	<link rel="stylesheet" media="all" href="css/screen.css" >
 	<link rel="stylesheet" href="http://css-spinners.com/css/spinner/spinner.css" type="text/css">
 	<link rel="stylesheet" media="all" href="css/swiper.min.css">
+	<link rel="stylesheet" media="all" href="css/font-awesome.min.css" >
+	<link rel="stylesheet" media="all" href="css/screen.css" >
 </head>
-<body class="is-gray nonbounce is-overflow">
+<body class="is-gray nonbounce">
 <!-- BEGIN  out-->
 <div class="out">
 	<!-- begin header  -->
@@ -43,7 +44,7 @@
    									</div>
    									<div class="article__img" data-attr="225">
    										<img src="img/niagara.jpg" alt="">
-   										<a class="article__link" href="#">В галерею</a>
+   										<a class="article__link js-link" href="#">В галерею</a>
    									</div>
    									<div class="article__in">
    										<div class="article__txt">
@@ -313,7 +314,7 @@
 <div class="sidemenu js-sidemenu">
 	<div class="sidemenu__in js-scroll" data-mcs-theme="minimal-dark">
 		<form>
-			<label class="search"><input type="search" placeholder="Поиск"><button type="send" class="icon-search"></button></label>
+			<label class="search"><input type="search" placeholder="Поиск"><button type="button" class="icon-search"></button></label>
 		</form>
 		<ul class="sidemenu__list">
 			<li>
@@ -404,6 +405,40 @@
 	<div class="spinner spinner-loader">Loading…</div>
 </div>
 <!-- end js-loader -->
+<!-- begin popup-wrap  -->
+<div class="popup-wrap js-img-popup">
+	<button type="button" class="close_ico js-close"></button>
+	<!-- begin social  -->
+	<div class="social">
+		<a href="#" class="social__icon">
+			<div class="social__icon-in -bg-fb">
+				<i class="fa fa-facebook"></i><p>Like</p>
+			</div>
+		</a>
+		<a href="#" class="social__icon">
+			<div class="social__icon-in -bg-fb">
+				<i class="fa fa-facebook"></i><p>Share</p>
+			</div>
+		</a>
+		<a href="#" class="social__icon">
+			<div class="social__icon-in -bg-tw">
+				<i class="fa fa-twitter"></i><p>Tweet</p>
+			</div>
+		</a>
+		<a href="#" class="social__icon">
+			<div class="social__icon-in -bg-vk">
+				<i class="fa fa-vk"></i><p>Like</p>
+			</div>
+		</a>
+		<a href="#" class="social__icon">
+			<div class="social__icon-in -bg-g">
+				<i class="fa fa-google-plus"></i><p>Share</p>
+			</div>
+		</a>
+	</div>
+	<!-- end social -->
+</div>
+<!-- end popup-wrap -->
 <!-- load scripts -->
 <script src="js/lib/head.js" data-headjs-load="js/init.js"></script>
 </body>

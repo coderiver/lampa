@@ -2,7 +2,7 @@ head.ready(function() {
 
 	// sidemenu
 	$('.js-btn').click(function() {
-		$('body').addClass('is-overflow');
+		$('body').addClass('is-fixed');
 		$('.out').addClass('is-moved');
 		$('.js-sidemenu').addClass('is-visible');
 		$('.js-overlay').addClass('is-visible');
@@ -10,7 +10,7 @@ head.ready(function() {
 
 	$('.js-overlay').click(function() {
 		$(this).removeClass('is-visible');
-		$('body').removeClass('is-overflow');
+		$('body').removeClass('is-fixed');
 		$('.out').removeClass('is-moved');
 		$('.js-sidemenu').removeClass('is-visible');
 	});
@@ -49,6 +49,7 @@ head.ready(function() {
 		speed: 500,
 		direction: 'vertical',
 		height: swiperHeight,
+		scrollbarHide: true,
 		onSlideChangeStart: function(swiper) {
 			var nextSlide = $(swiper.slides[swiper.activeIndex]).find('.article__img').data();
 			console.log(nextSlide);
@@ -65,19 +66,19 @@ head.ready(function() {
 	// popup
 	$('.js-info').click(function() {
 		$('.js-popup').addClass('is-active');
-		$('body').addClass('is-overflow');
+		$('body').addClass('is-fixed');
 	});
 
 	$('.js-more').click(function(e) {
 		e.preventDefault();
 		$('.js-more-popup').addClass('is-active');
-		$('body').addClass('is-overflow');
+		$('body').addClass('is-fixed');
 	});
 
 	$('.js-share-link').click(function(e) {
 		e.preventDefault();
 		$('.js-share-link-popup').addClass('is-active');
-		$('body').addClass('is-overflow');
+		$('body').addClass('is-fixed');
 	});
 
 	$('.js-link').click(function(e) {
@@ -85,7 +86,8 @@ head.ready(function() {
 		$(this).text('Скопировать ссылку');
 		$(this).parent().addClass('-z-index');
 		$('.js-img-popup').addClass('is-active');
-		$('body').addClass('is-overflow');
+		$('body').addClass('is-fixed');
+		$('.article__img.-z-index').clone().appendTo('.js-img-popup');
 	});
 
 
@@ -93,7 +95,8 @@ head.ready(function() {
 		$(this).parent().removeClass('is-active');
 		$('.js-link').text('Поделиться');
 		$('.js-link').parent().removeClass('-z-index');
-		$('body').removeClass('is-overflow');
+		$('body').removeClass('is-fixed');
+		$(this).parent().find('.article__img').remove();
 	});
 
 	// preloader
@@ -101,10 +104,5 @@ head.ready(function() {
 		spinner   = preloader.find('.spinner');
 	spinner.delay(2500).fadeOut();
 	preloader.delay(3000).fadeOut('fast');
-	$('body').css('overflow', 'hidden');
-	setTimeout(function() {
-		$('body').css('overflow', 'visible');
-	}, 3000);
-
 
 });
