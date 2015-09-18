@@ -144,7 +144,7 @@ input[type="search"]::-webkit-search-cancel-button { display: none; }
 .article__gallery .slick-next { right: 10px; }
 .article__overlay { position: absolute; left: 0; right: 0; bottom: 0; height: 44px; background: rgba(0, 0, 0, 0.4); }
 .article__txt { padding: 1rem 0 0.8rem; font-size: 1.5rem; color: #424242; line-height: 2rem; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
-.article__txt p { height: 12rem; overflow: hidden; }
+.article__txt p { height: 11.5rem; overflow: hidden; }
 .article a { color: #62b7ff; text-decoration: underline; }
 .article .article__link { text-decoration: none; color: #FFF; }
 
@@ -179,6 +179,15 @@ input[type="search"]::-webkit-search-cancel-button { display: none; }
 
 .copy-text-btn { display: block; width: 100%; margin-top: 10px; padding: 16px 0; text-transform: uppercase; color: #FFF; background: rgba(0, 0, 0, 0.5); line-height: 1; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
+.blocker { display: none; position: absolute; text-align: center; top: 0; left: 0; right: 0; bottom: 0; background: #fff; z-index: 20; }
+.blocker__logo { display: inline-block; padding-top: 2.1rem; max-width: 12rem; }
+.blocker__logo img { width: 100%; }
+.blocker__txt { padding-top: 5rem; font-size: 1.7rem; }
+.blocker__txt b { font-weight: 600; }
+.blocker__link { position: absolute; display: block; left: 50%; bottom: 4rem; width: 200px; margin-left: -100px; padding: 10px 23px; font-size: 16px; font-weight: 600; color: #62b7ff; border: 1px solid #62b7ff; border-radius: 2px; line-height: 1; box-sizing: border-box; }
+
+@media screen and (orientation: landscape) { body { position: fixed; top: 0; left: 0; right: 0; bottom: 0; }
+  .blocker { display: block; } }
 .slick-slider { position: relative; display: block; box-sizing: border-box; -moz-box-sizing: border-box; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; -ms-touch-action: pan-y; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 
 .slick-list { position: relative; overflow: hidden; display: block; margin: 0; padding: 0; }

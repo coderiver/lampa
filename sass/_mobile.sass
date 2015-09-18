@@ -240,7 +240,7 @@
 		line-height: 2rem
 		+box
 		p
-			height: 12rem
+			height: 11.5rem
 			overflow: hidden
 	a
 		color: #62b7ff
@@ -338,6 +338,7 @@
 		vertical-align: middle
 		z-index: 2
 
+// copy link
 .copy-text
 	padding: 14px 0
 	text-align: center
@@ -365,3 +366,52 @@
 	background: rgba(#000, 0.5)
 	line-height: 1
 	+box
+
+// blocker
+.blocker
+	display: none
+	position: absolute
+	text-align: center
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	background: #fff
+	z-index: 20
+	&__logo
+		display: inline-block
+		padding-top: 2.1rem
+		max-width: 12rem
+		img
+			width: 100%
+	&__txt
+		padding-top: 5rem
+		font-size: 1.7rem
+		b
+			font-weight: 600
+	&__link
+		position: absolute
+		display: block
+		left: 50%
+		bottom: 4rem
+		width: 200px
+		margin-left: -100px
+		padding: 10px 23px
+		font-size: 16px
+		font-weight: 600
+		color: #62b7ff
+		border: 1px solid #62b7ff
+		border-radius: 2px
+		line-height: 1
+		box-sizing: border-box
+
+
+@media screen and (orientation:landscape)
+	body
+		position: fixed
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+	.blocker
+		display: block
